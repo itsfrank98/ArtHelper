@@ -1,0 +1,14 @@
+fact(city, (florence, 'Florence')).
+fact(city, (paris, 'Paris')).
+fact(city, (rome, 'Rome')).
+fact(city, (urbino, 'Urbino')).
+fact(city, (amsterdam, 'Amsterdam')).
+fact(city, (venice, 'Venice')).
+fact(city, (perugia, 'Perugia')).
+fact(city, (arles, 'Arles')).
+fact(city, (auvers, 'Auvers')).
+fact(city, (nuenen, 'Nuenen')).
+fact(city, (london, 'London')).
+fact(city, (otranto, 'Otranto')).
+fact(city, (naples, 'Naples')).
+fact(city, (caen, 'Caen')).

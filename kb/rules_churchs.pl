@@ -1,0 +1,55 @@
+:- dynamic rule/2.
+:- multifile rule/3.
+
+rule(churches_same_style_and_city,
+    (C1, C2),
+    [
+        fact(church, (C1, _, City, _, _)),
+        fact(follows, (C1, S1)),
+        call(!),
+        fact(church, (C2, _, City, _, _)),
+        call(C1 \= C2),
+        fact(follows, (C2, S2)),
+        call(list_intersect(S1, S2, Intersection)),
+        call(Intersection \= [])
+    ]
+).
+
+/*Given a church, this rule will find the churches that were built during the same years in the same city*/
+rule(churches_same_construction_years,
+    (C1, C2),
+    [
+        fact(church, (C1, _, City, Yb1, Ye1)),
+        call(!),
+        fact(church, (C2, _, City, Yb2, Ye2)),
+        call(C1 \= C2),
+        (
+            call((Yb1 < Yb2, Ye1 > Yb2));
+            call((Yb2 < Yb1, Ye2 > Yb1))
+        )
+    ]
+).
+
+rule(retrieve_church_information, 
+    (C, CName, CityName, Yb, Ye, ArchitectsNames, StylesNames),
+    [
+        fact(church, (C, CName, City, Yb, Ye)),
+        fact(city, (City, CityName)),
+        fact(designed, (C, Architects)),
+        call(convert_list_elements_to_names(Architects, ArchitectsNames)),
+        fact(follows, (C, Styles)),
+        call(convert_list_elements_to_names(Styles, StylesNames))
+    ]
+).
+rule(retrieve_related_churches,
+    (C, Churches),
+    [
+        rule(churches_same_style_and_city, (C, Churches))
+    ]
+).
+rule(retrieve_related_churches,
+    (C, Churches),
+    [
+        rule(churches_same_construction_years, (C, Churches))
+    ]
+).
