@@ -20,9 +20,7 @@ fact(artist, (alberti, 'Leon Battista Alberti', 1404, 1472)).
 fact(artist, (masaccio, 'Tommaso di Ser Giovanni di Simone', 1401, 1428)).
 fact(artist, (silvani, 'Gherardo Silvani', 1579, 1675)).
 fact(artist, (manetti, 'Antonio Manetti', 1423, 1497)).
-fact(artist, (talenti, 'Simone Talenti', 1340, 1381)).
 fact(artist, (fioravante, 'Neri di Fioravante', 1320, 1374)).
-fact(artist, (benci, 'Benci di Cione Dami', 1310, 1388)).
 
 fact(influenced_by, (leonardo, [della_francesca, masaccio])).
 fact(influenced_by, (michelangelo, [masaccio])).

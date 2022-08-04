@@ -35,4 +35,4 @@ fact(designed, (santa_croce, [dicambio])).
 fact(designed, (santa_maria_novella, [brunelleschi, alberti])).
 fact(designed, (san_frediano, [silvani])).
 fact(designed, (santo_spirito, [brunelleschi, manetti])).
-fact(designed, (orsanmichele, [talenti, fioravante, benci])).
+fact(designed, (orsanmichele, [fioravante])).
