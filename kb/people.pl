@@ -4,28 +4,28 @@
 :- dynamic fact/2.
 
 %DEFINITION OF SOME PEOPLE AND ARTISTS
-fact(artist, (leonardo, 'Leonardo da Vinci', 1452, 1519)).
+fact(artist, (leonardo_da_vinci, 'Leonardo da Vinci', 1452, 1519)).
 fact(artist, (michelangelo, 'Michelangelo di Lodovico Buonarroti Simoni', 1475, 1564)).
-fact(artist, (brunelleschi, 'Filippo Brunelleschi', 1377, 1446)).
-fact(artist, (defabris, 'Emilio De Fabris', 1807, 1883)).
-fact(artist, (dicambio, 'Arnolfo Di Cambio', 1245, 1308)).
+fact(artist, (filippo_brunelleschi, 'Filippo Brunelleschi', 1377, 1446)).
+fact(artist, (emilio_de_fabris, 'Emilio De Fabris', 1807, 1883)).
+fact(artist, (arnolfo_di_cambio, 'Arnolfo Di Cambio', 1245, 1308)).
 fact(artist, (raffaello, 'Raffaello Sanzio', 1483, 1520)).
-fact(artist, (botticelli, 'Alessandro di Mariano di Vanni Filipepi (Sandro Botticelli)', 1445, 1510)).
-fact(artist, (della_francesca, 'Piero Della Francesca', 1412, 1492)).
+fact(artist, (sandro_botticelli, 'Alessandro di Mariano di Vanni Filipepi (Sandro Botticelli)', 1445, 1510)).
+fact(artist, (piero_della_francesca, 'Piero Della Francesca', 1412, 1492)).
 fact(artist, (caravaggio, 'Michelangelo Merisi', 1571, 1610)).
 fact(artist, (tiziano, 'Tiziano Vecellio', 1489, 1576)).
-fact(artist, (uccello, 'Paolo Uccello', 1397, 1475)).
-fact(artist, (vangogh, 'Vincent Van Gogh', 1853, 1890)).
-fact(artist, (alberti, 'Leon Battista Alberti', 1404, 1472)).
+fact(artist, (paolo_uccello, 'Paolo Uccello', 1397, 1475)).
+fact(artist, (vincent_van_gogh, 'Vincent Van Gogh', 1853, 1890)).
+fact(artist, (leon_battista_alberti, 'Leon Battista Alberti', 1404, 1472)).
 fact(artist, (masaccio, 'Tommaso di Ser Giovanni di Simone', 1401, 1428)).
-fact(artist, (silvani, 'Gherardo Silvani', 1579, 1675)).
-fact(artist, (manetti, 'Antonio Manetti', 1423, 1497)).
-fact(artist, (fioravante, 'Neri di Fioravante', 1320, 1374)).
+fact(artist, (gherardo_silvani, 'Gherardo Silvani', 1579, 1675)).
+fact(artist, (antonio_manetti, 'Antonio Manetti', 1423, 1497)).
+fact(artist, (neri_fioravante, 'Neri di Fioravante', 1320, 1374)).
 
-fact(influenced_by, (leonardo, [della_francesca, masaccio])).
+fact(influenced_by, (leonardo_da_vinci, [piero_della_francesca, masaccio])).
 fact(influenced_by, (michelangelo, [masaccio])).
-fact(influenced_by, (raffaello, [uccello, michelangelo])).
-fact(influenced_by, (botticelli, [masaccio])).
+fact(influenced_by, (raffaello, [paolo_uccello, michelangelo])).
+fact(influenced_by, (sandro_botticelli, [masaccio])).
 fact(influenced_by, (caravaggio, [tiziano])).
 fact(influenced_by, (tiziano, [raffaello, michelangelo])).
 
@@ -77,14 +77,3 @@ fact(portrayable, (st_paul, 'Saint Paul')).
 fact(portrayable, (st_thomas, 'Saint Thomas')).
 fact(portrayable, (st_peter, 'Saint Peter')).
 fact(portrayable, (st_andrew, 'Saint Andrew')).
-
-fact(lived, (lisa_gherardini, florence)).
-fact(lived, (lorenzo_de_medici, florence)).
-fact(lived, (leonardo, florence)).
-fact(lived, (raffaello, urbino)).
-fact(lived, (raffaello, rome)).
-fact(lived, (federico_montefeltro, urbino)).
-fact(lived, (battista_sforza, urbino)).
-fact(lived, (della_rovere, urbino)).
-fact(lived, (fornarina, rome)).
-fact(lived, (dante, florence)).

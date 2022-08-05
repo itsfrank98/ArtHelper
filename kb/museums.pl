@@ -30,9 +30,9 @@ fact(owns, (vangogh_museum, [van_gogh_hat, van_gogh_while_painting, potato_eater
 fact(owns, (vatican_rooms, [athens_school, sacrament_dispute])).
 fact(owns, (santa_maria_novella, [adam_animals_creation, eve_and_sin, holy_trinity])).
 
-fact(designed, (santa_maria_del_fiore, [dicambio, defabris, brunelleschi])).
-fact(designed, (santa_croce, [dicambio])).
-fact(designed, (santa_maria_novella, [brunelleschi, alberti])).
-fact(designed, (san_frediano, [silvani])).
-fact(designed, (santo_spirito, [brunelleschi, manetti])).
-fact(designed, (orsanmichele, [fioravante])).
+fact(designed, (santa_maria_del_fiore, [arnolfo_di_cambio, emilio_de_fabris, filippo_brunelleschi])).
+fact(designed, (santa_croce, [arnolfo_di_cambio])).
+fact(designed, (santa_maria_novella, [filippo_brunelleschi, leon_battista_alberti])).
+fact(designed, (san_frediano, [gherardo_silvani])).
+fact(designed, (santo_spirito, [filippo_brunelleschi, antonio_manetti])).
+fact(designed, (orsanmichele, [neri_fioravante])).

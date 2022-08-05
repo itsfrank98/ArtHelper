@@ -22,7 +22,7 @@ fact(artwork, (venere_marte, 'Venere e Marte', 1482, florence, painting, 'Venus 
 fact(artwork, (madonna_garofani, 'Madonna dei Garofani', 1507, perugia, painting, 'Mary plays with Jesus. The two exchange some red carnations (garofani in Italian), which symbolize both Jesus\' passion and his marriage with the church. In spite of what imposed by the iconography of that time, the two are not portrayed in rigid and formal postures, but they seem to be happy and carefree')).
 fact(artwork, (bacco_arianna, 'Bacco e Arianna', 1523, ferrara, painting, 'Arianna greets the ship on which her lover, Teseo, boarded. Bacchus, who is in love with Arianna, jumps from a wagon and reaches out to her.')).
 fact(artwork, (sunflowers, 'Sunflowers', 1888, arles, painting, 'One of the paintings in the series of the \'sunflowers\' by the Dutch artist')).
-fact(artwork, (van_gogh_hat, 'Self-portrait with grey hat', 1888, arles, painting, 'Self portrait of Van Gogh wearing a grey felt hat.')).
+fact(artwork, (van_gogh_with_hat, 'Self-portrait with grey hat', 1888, arles, painting, 'Self portrait of Van Gogh wearing a grey felt hat.')).
 fact(artwork, (van_gogh_while_painting, 'Self-portrait as a painter', 1887, paris, painting, 'Self portrait of Van Gogh while painting something.')).
 fact(artwork, (potato_eaters, 'Four Peasants at a Meal', 1885, nuenen, painting, 'In this ordinary life depiction, the author portrays five peasants as they are having lunch, eating some potatoes. The atmosphere and choice of the models manages to represent the peasants as they really are, simple and poor.')).
 fact(artwork, (athens_school, 'Athens school', 1411, rome, fresco, 'Depiction of the great phylosophers. The two main figures are Plato and Aristoteles. The former represents the theme of the search for the good. The latter symbolizes something more rational. Many other phylosophers are portrayed, organized in groups according to their school of thought.')).
@@ -40,8 +40,8 @@ fact(composition, ([battista_sforza_portrait, federico_montefeltro_portrait])).
 fact(composition, ([adam_animals_creation, eve_and_sin])).
 fact(composition, ([san_romano_louvre, san_romano_nationalgallery, san_romano_uffizi])).
 
-fact(author, (monna_lisa, leonardo)).
-fact(author, (magi_adoration, leonardo)).
+fact(author, (monna_lisa, leonardo_da_vinci)).
+fact(author, (magi_adoration, leonardo_da_vinci)).
 fact(author, (doni, michelangelo)).
 fact(author, (adam_creation, michelangelo)).
 fact(author, (eve_creation, michelangelo)).
@@ -52,24 +52,24 @@ fact(author, (velata, raffaello)).
 fact(author, (madonna_cardellino, raffaello)).
 fact(author, (madonna_garofani, raffaello)).
 fact(author, (sacrament_dispute, raffaello)).
-fact(author, (san_romano_uffizi, uccello)).
-fact(author, (san_romano_louvre, uccello)).
-fact(author, (san_romano_nationalgallery, uccello)).
-fact(author, (adam_animals_creation, uccello)).
-fact(author, (eve_and_sin, uccello)).
+fact(author, (san_romano_uffizi, paolo_uccello)).
+fact(author, (san_romano_louvre, paolo_uccello)).
+fact(author, (san_romano_nationalgallery, paolo_uccello)).
+fact(author, (adam_animals_creation, paolo_uccello)).
+fact(author, (eve_and_sin, paolo_uccello)).
 fact(author, (della_rovere_portrait, tiziano)). 
 fact(author, (bacco_arianna, tiziano)).
-fact(author, (venere_birth, botticelli)).
-fact(author, (primavera, botticelli)).
-fact(author, (venere_marte, botticelli)).
-fact(author, (magi_botticelli, botticelli)).
-fact(author, (federico_montefeltro_portrait, della_francesca)).
-fact(author, (battista_sforza_portrait, della_francesca)).
+fact(author, (venere_birth, sandro_botticelli)).
+fact(author, (primavera, sandro_botticelli)).
+fact(author, (venere_marte, sandro_botticelli)).
+fact(author, (magi_botticelli, sandro_botticelli)).
+fact(author, (federico_montefeltro_portrait, piero_della_francesca)).
+fact(author, (battista_sforza_portrait, piero_della_francesca)).
 fact(author, (bacco, caravaggio)).
-fact(author, (sunflowers, vangogh)).
-fact(author, (van_gogh_hat, vangogh)).
-fact(author, (van_gogh_while_painting, vangogh)).
-fact(author, (potato_eaters, vangogh)).
+fact(author, (sunflowers, vincent_van_gogh)).
+fact(author, (van_gogh_with_hat, vincent_van_gogh)).
+fact(author, (van_gogh_while_painting, vincent_van_gogh)).
+fact(author, (potato_eaters, vincent_van_gogh)).
 fact(author, (holy_trinity, masaccio)).
 fact(author, (madonna_casini, masaccio)).
 
@@ -94,8 +94,8 @@ fact(main_subject, (venere_marte, [venere, marte])).
 fact(main_subject, (madonna_garofani, [jesus, holy_mary])).
 fact(main_subject, (bacco_arianna, [bacchus, arianna])).
 fact(main_subject, (sunflowers, [])).
-fact(main_subject, (van_gogh_hat, [vangogh])).
-fact(main_subject, (van_gogh_while_painting, [vangogh])).
+fact(main_subject, (van_gogh_with_hat, [vincent_van_gogh])).
+fact(main_subject, (van_gogh_while_painting, [vincent_van_gogh])).
 fact(main_subject, (potato_eaters, [])).
 fact(main_subject, (adam_creation, [adam, god])).
 fact(main_subject, (eve_creation, [adam, eve, god])).
@@ -127,7 +127,7 @@ fact(secondary_subject, (venere_marte, [fauni])).
 fact(secondary_subject, (madonna_garofani, [])).
 fact(secondary_subject, (bacco_arianna, [])).
 fact(secondary_subject, (sunflowers, [])).
-fact(secondary_subject, (van_gogh_hat, [])).
+fact(secondary_subject, (van_gogh_with_hat, [])).
 fact(secondary_subject, (van_gogh_while_painting, [])).
 fact(secondary_subject, (potato_eaters, [])).
 fact(secondary_subject, (adam_creation, [])).

@@ -42,7 +42,7 @@ fact(follows, (federico_montefeltro_portrait, [early_renaissance])).
 fact(follows, (battista_sforza_portrait, [early_renaissance])).
 fact(follows, (bacco, [baroque])).
 fact(follows, (sunflowers, [post_impressionism])).
-fact(follows, (van_gogh_hat, [post_impressionism])). 
+fact(follows, (van_gogh_with_hat, [post_impressionism])). 
 fact(follows, (van_gogh_while_painting, [post_impressionism])).
 fact(follows, (potato_eaters, [realism])).
 fact(follows, (adam_creation, [high_renaissance])).

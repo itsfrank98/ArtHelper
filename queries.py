@@ -36,3 +36,14 @@ def find_church_requirements(church):
     info = interface.query(query_church_info)
     related_churches = interface.query(query_related_churches)
     print(related_churches)
+
+
+def find_artworks_names(path):
+    interface = PrologInterface(path)
+    query = "backward(fact(artwork, (ID, Name, _, _, _, _)))"
+    results = interface.query(query)
+    unique_dict = {}
+    for d in results['query_results']:
+        for _, _ in d.items():
+            unique_dict[d["ID"]] = d["Name"]
+    return unique_dict

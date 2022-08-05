@@ -18,7 +18,7 @@ def add_canvas(frame, img, x, y, text):
         btn.bind("<Button>", lambda e: openArtWindow(root))
     else:
         btn.bind("<Button>", lambda e: openChurchesWindow(root))'''
-    c.create_text(150, 190, text=text, font=('Helvetica', 15), fill='white')
+    c.create_text(150, 190, text=text, font=('Helvetica bold', 15), fill='white')
     c.create_window(100, 220, anchor="nw", window=btn)
 
 # Initialize the root
