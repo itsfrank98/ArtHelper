@@ -4,7 +4,7 @@
 
 %PAINTINGS
 fact(artwork, (monna_lisa, 'Monna Lisa', 1503, florence, painting, 'Portrait of Lisa Gherardini, wife of a florentine noble. The painting style represents her as core part of the surrounding nature.')).
-fact(artwork, (raffaello_selfportrait, 'Autoritratto', 1506, urbino, painting, 'Self portrait. The body twist is unusual for that time.')).
+fact(artwork, (raffaello_selfportrait, 'Autoritratto (Raffaello)', 1506, urbino, painting, 'Self portrait. The body twist is unusual for that time.')).
 fact(artwork, (san_romano_nationalgallery, 'Niccolò da Tolentino alla testa dei fiorentini', 1440, florence, painting, 'Niccolò da Tolentino is at the head of the florentine troops. The battle just began.')).
 fact(artwork, (san_romano_uffizi, 'Disarcionamento di Bernardino della Carda', 1440, florence, painting, 'Bernardino della Carda, hit by a spear, falls from his horse.')).
 fact(artwork, (san_romano_louvre, 'Intervento decisivo a fianco dei fiorentini di Michele Attendolo', 1440, florence, painting, 'Michele Attendolo joins the battle along the florentine troops.')).
@@ -13,7 +13,7 @@ fact(artwork, (velata, 'La velata', 1515, rome, painting, 'Portrait of the woman
 fact(artwork, (venere_birth, 'Nascita di Venere', 1485, florence, painting, 'Portrayal of the birth of Venus. The goddess stands in a scallcop shell. The wind god Zephyr blows at her')).
 fact(artwork, (primavera, 'La Primavera', 1480, florence, painting, 'The painting features six female figures and two male, along with a cupid, in an orange grove. The movement of the composition is from right to left, so following that direction the standard identification of the figures is: at far right "Zephyrus, the biting wind of March, kidnaps and possesses the nymph Chloris, whom he later marries and transforms into a deity; she becomes the goddess of Spring, eternal bearer of life, and is scattering roses on the ground." Chloris the nymph overlaps Flora, the goddess she transforms into.')).
 fact(artwork, (doni, 'Tondo Doni', 1505, florence, painting, 'Depiction of the Holy Family in a round painting (tondo). Contrary to the iconography Joseph is holding the Baby instead of Mary.')).
-fact(artwork, (magi_adoration, 'Adorazione dei magi', 1482, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
+fact(artwork, (magi_adoration, 'Adorazione dei magi (Leonardo)', 1482, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
 fact(artwork, (federico_montefeltro_portrait, 'Ritratto del duca di Urbino Federico da Montefeltro', 1475, urbino, painting, 'Right half of the dyptic featuring the profiles of the two Urbino dukes.')).
 fact(artwork, (battista_sforza_portrait, 'Ritratto di Battista Sforza', 1475, urbino, painting, 'Right half of the dyptic featuring the profiles of the two Urbino dukes. Battista Sforza was already dead when her portrait was made. Her hairline is very high, as imposed by the fashion of that time.')).
 fact(artwork, (bacco, 'Bacco', 1595, rome, painting, 'Potrayal of Bacchus, the wine and thrill god.')).
@@ -31,7 +31,7 @@ fact(artwork, (eve_creation, 'Creazione di Eva', 1510, rome, fresco, 'God create
 fact(artwork, (sacrament_dispute, 'Disputa del sacramento', 1509, rome, fresco, 'The scene is on two levels, spanning Earth and Heaven. Above, the main figure is Christ, flanked by Mary and John the Baptist. on an altar sits the monstrance. On the lower level, there is an altar flanked by theologians who are debating Transubstantiation.')).
 fact(artwork, (adam_animals_creation, 'Creazione degli animali e di Adamo', 1420, florence, fresco, 'God creates Adam and the animals')).
 fact(artwork, (eve_and_sin, 'Creazione di Eva e il Peccato originale', 1420, florence, fresco, 'God creates Eve, portrayal of the original sin')).
-fact(artwork, (magi_botticelli, 'Adorazione dei Magi', 1475, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
+fact(artwork, (magi_botticelli, 'Adorazione dei Magi (Botticelli)', 1475, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
 fact(artwork, (universal_judice, 'Giudizio Universale', 1541, rome, fresco, 'The fresco decorates the wall behind the altar in the sistine chapel. The scene depicts the end of times, when there will be the second come of Christ and there will be the eternal judgment from God on all the humanity, to open the kingdom of Heaven.')).
 fact(artwork, (holy_trinity, 'Santa trinità', 1428, florence, fresco, 'Virgin, saint John and crucifixed Jesus')).
 fact(artwork, (madonna_casini, 'Madonna del Solletico', 1426, florence, painting, 'The Virgin, blessing her Child with two fingers, tickles Jesus, who laughs')).

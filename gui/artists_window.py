@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import ImageTk, Image
 import os
+from queries import find_names
 
 width = 10
 height = 1
@@ -16,39 +17,43 @@ def add_canvas(row, column, frame, text, img):
     ########BIND HERE
     c.create_window(100, 250, window=btn, anchor="nw")
 
-# Initialize the root
-root = Tk()
-root.geometry("900x500")
-root.resizable(False, False)
 
-# Add the first frame
-first_frame = Frame(root)
-first_frame.pack(expand=True, fill=BOTH)
+def open(root: Toplevel):
+    # Initialize the root
+    #root = Tk()
+    root.wm_title("Choose an artist")
+    root.geometry("900x500")
+    root.resizable(False, False)
 
-# Create the main canvas inside the main frame.
-main_canvas = Canvas(first_frame, width=1000, height=500)
+    # Add the first frame
+    first_frame = Frame(root)
+    first_frame.pack(expand=True, fill=BOTH)
 
-# Create the scrollbar
-sbar = Scrollbar(first_frame, orient=HORIZONTAL, command=main_canvas.xview)
-sbar.pack(side=BOTTOM, fill=X)
-# Configure the main canvas to properly interact with the scrollbar
-main_canvas.configure(xscrollcommand=sbar.set)
-main_canvas.bind('<Configure>', lambda e:main_canvas.configure(scrollregion=main_canvas.bbox("all")))
+    # Create the main canvas inside the main frame.
+    main_canvas = Canvas(first_frame, width=1000, height=500)
 
-# Create the second frame. Very odd, but it's the only way of making the scrollbar work
-second_frame = Frame(main_canvas)
-main_canvas.create_window((0,0), window=second_frame, anchor="nw")
+    # Create the scrollbar
+    sbar = Scrollbar(first_frame, orient=HORIZONTAL, command=main_canvas.xview)
+    sbar.pack(side=BOTTOM, fill=X)
+    # Configure the main canvas to properly interact with the scrollbar
+    main_canvas.configure(xscrollcommand=sbar.set)
+    main_canvas.bind('<Configure>', lambda e:main_canvas.configure(scrollregion=main_canvas.bbox("all")))
 
-row = 0
-column = 0
-# Create one canvas for each style and add it to the second frame
-for f in os.listdir(img_directory):
-    img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, f)))
-    images.append(img)
-    text = f.split(".")[0].replace("_", " ").title()
-    add_canvas(row, column, second_frame, text, img)
-    column += 1
-main_canvas.pack(fill=X)
+    # Create the second frame. Very odd, but it's the only way of making the scrollbar work
+    second_frame = Frame(main_canvas)
+    main_canvas.create_window((0,0), window=second_frame, anchor="nw")
 
-root.mainloop()
+    row = 0
+    column = 0
+    artists = find_names(path="../kb", query="backward(fact(artist, (ID, Name, _, _)))")
+    # Create one canvas for each style and add it to the second frame
+    for k in artists.keys():
+        img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))
+        images.append(img)
+        text = k.split(".")[0].replace("_", " ").title()    # Here I could simply use the "Name" field of the dictionary but I chose not to since some artists like have very long names, ie Caravaggio's real name is Alessandro di Mariano di Vanni Filipepi
+        add_canvas(row, column, second_frame, text, img)
+        column += 1
+    main_canvas.pack(fill=X)
+
+    root.mainloop()
 

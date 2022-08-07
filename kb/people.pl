@@ -4,18 +4,18 @@
 :- dynamic fact/2.
 
 %DEFINITION OF SOME PEOPLE AND ARTISTS
-fact(artist, (leonardo_da_vinci, 'Leonardo da Vinci', 1452, 1519)).
+fact(artist, (leonardo_da_vinci, 'Leonardo di ser Piero da Vinci', 1452, 1519)).
 fact(artist, (michelangelo, 'Michelangelo di Lodovico Buonarroti Simoni', 1475, 1564)).
-fact(artist, (filippo_brunelleschi, 'Filippo Brunelleschi', 1377, 1446)).
+fact(artist, (filippo_brunelleschi, 'Filippo di ser Brunellesco Lapi', 1377, 1446)).
 fact(artist, (emilio_de_fabris, 'Emilio De Fabris', 1807, 1883)).
 fact(artist, (arnolfo_di_cambio, 'Arnolfo Di Cambio', 1245, 1308)).
 fact(artist, (raffaello, 'Raffaello Sanzio', 1483, 1520)).
 fact(artist, (sandro_botticelli, 'Alessandro di Mariano di Vanni Filipepi (Sandro Botticelli)', 1445, 1510)).
-fact(artist, (piero_della_francesca, 'Piero Della Francesca', 1412, 1492)).
+fact(artist, (piero_della_francesca, 'Piero di Benedetto de\' Franceschi', 1412, 1492)).
 fact(artist, (caravaggio, 'Michelangelo Merisi', 1571, 1610)).
 fact(artist, (tiziano, 'Tiziano Vecellio', 1489, 1576)).
-fact(artist, (paolo_uccello, 'Paolo Uccello', 1397, 1475)).
-fact(artist, (vincent_van_gogh, 'Vincent Van Gogh', 1853, 1890)).
+fact(artist, (paolo_uccello, 'Paolo di Dono', 1397, 1475)).
+fact(artist, (vincent_van_gogh, 'Vincent Willem Van Gogh', 1853, 1890)).
 fact(artist, (leon_battista_alberti, 'Leon Battista Alberti', 1404, 1472)).
 fact(artist, (masaccio, 'Tommaso di Ser Giovanni di Simone', 1401, 1428)).
 fact(artist, (gherardo_silvani, 'Gherardo Silvani', 1579, 1675)).

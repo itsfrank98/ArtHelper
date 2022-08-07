@@ -6,14 +6,14 @@ fact(style, (romanic, 'Romanic', 1000, 1200, architecture)).
 fact(style, (gothic, 'Gothic', 1144, 1600, architecture)).
 fact(style, (neogothic, 'Neogothic', 1790, 1900, architecture)).
 fact(style, (baroque, 'Baroque', 1600, 1690, both)).
-fact(style, (proto_renaissance, 'Proto renaissance', 1200, 1400, both)).
-fact(style, (early_renaissance, 'Early renaissance', 1400, 1490, both)).
-fact(style, (high_renaissance, 'High renaissance', 1490, 1530, both)).
+fact(style, (proto_renaissance, 'Proto Renaissance', 1200, 1400, both)).
+fact(style, (early_renaissance, 'Early Renaissance', 1400, 1490, both)).
+fact(style, (high_renaissance, 'High Renaissance', 1490, 1530, both)).
 fact(style, (mannerism, 'Mannerism', 1492, 1580, art)).
 fact(style, (neoclassicism, 'Neoclassicism', 1750, 1820, both)).
 fact(style, (realism, 'Realism', 1840, 1880, artistic)).
 fact(style, (impressionism, 'Impressionism', 1865, 1900, artistic)).
-fact(style, (post_impressionism, 'Post impressionism', 1886, 1905, artistic)).
+fact(style, (post_impressionism, 'Post Impressionism', 1886, 1905, artistic)).
 
 fact(same_main_current, ([proto_renaissance, early_renaissance, high_renaissance])).
 fact(same_main_current, ([gothic, neogothic])).

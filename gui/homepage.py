@@ -1,31 +1,46 @@
 from tkinter import *
 from PIL import ImageTk, Image
+import artists_window, styles_window
+from WindowWithCombobox import WindowWithCombobox
+from utils import create_or_set_root
 
-width = 4
-height = 1
+def openStylesWindow(root):
+    new_window = Toplevel(root)
+    new_window = create_or_set_root("Choose a style", "400x500", False, False, new_window)
+    styles_window.open(new_window)
+def openArtistsWindow(root):
+    new_window = Toplevel(root)
+    new_window = create_or_set_root("Choose an artist", "900x500", False, False, new_window)
+    artists_window.open(new_window)
+def openArtWindow(root):
+    new_window = Toplevel(root)
+    new_window = WindowWithCombobox("Artworks", "images/art_window_bg.png", "Choose an artwork", "backward(fact(artwork, (ID, Name, _, _, _, _)))", "../kb", 350, 80, new_window)
+    new_window.create_window()
+def openChurchesWindow(root):
+    new_window = Toplevel(root)
+    new_window = WindowWithCombobox("Churches", "images/churches_window_bg.png", "Choose a church", "backward(fact(church, (ID, Name, _, _, _)))", "../kb", 150, 200, new_window)
+    new_window.create_window()
 
 
-def add_canvas(frame, img, x, y, text):
+def add_canvas(root, frame, img, x, y, text, type):
     c = Canvas(frame, width=300, height=300)
     c.pack(fill=BOTH, expand=True)
     bg = c.create_image(x, y, image=img)
-    btn = Button(frame, text="Go!", width=width, height=height, background='black', fg="white")
-    '''if type == "styles":
+    btn = Button(frame, text="Go!", width=4, height=1, background='black', fg="white")
+    if type == "styles":
         btn.bind("<Button>", lambda e: openStylesWindow(root))
     elif type == "artists":
         btn.bind("<Button>", lambda e: openArtistsWindow(root))
     elif type == "art":
         btn.bind("<Button>", lambda e: openArtWindow(root))
     else:
-        btn.bind("<Button>", lambda e: openChurchesWindow(root))'''
+        btn.bind("<Button>", lambda e: openChurchesWindow(root))
     c.create_text(150, 190, text=text, font=('Helvetica bold', 15), fill='white')
     c.create_window(100, 220, anchor="nw", window=btn)
 
+
 # Initialize the root
-root = Tk()
-root.geometry("600x600")
-root.wm_title("KnowYourArt")
-root.resizable(False, False)
+root = create_or_set_root("KnowYourArt", "600x600", False, False)
 
 # Create the frames
 f_styles = Frame(root)
@@ -40,10 +55,10 @@ art_bg = ImageTk.PhotoImage(Image.open("images/art_bg.png"))
 churches_bg = ImageTk.PhotoImage(Image.open("images/churches_bg.png"))
 
 # Add the canvases
-add_canvas(f_styles, styles_bg, 0, 0, "Seek information about styles")
-add_canvas(f_artists, artists_bg, 240, 240, "Seek information about \n artists and architects")
-add_canvas(f_art, art_bg, 120, 120, "Seek information about artworks")
-add_canvas(f_churches, churches_bg, 90, 150, "Seek information about churches")
+add_canvas(root, f_styles, styles_bg, 0, 0, "Seek information about styles", "styles")
+add_canvas(root, f_artists, artists_bg, 240, 240, "Seek information about \n artists and architects", "artists")
+add_canvas(root, f_art, art_bg, 120, 120, "Seek information \nabout artworks", "art")
+add_canvas(root, f_churches, churches_bg, 90, 150, "Seek information \nabout churches", "churches")
 
 f_styles.grid(row=0, column=0)
 f_artists.grid(row=0, column=1)
