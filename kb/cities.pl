@@ -9,6 +9,6 @@ fact(city, (arles, 'Arles')).
 fact(city, (auvers, 'Auvers')).
 fact(city, (nuenen, 'Nuenen')).
 fact(city, (london, 'London')).
-fact(city, (otranto, 'Otranto')).
+fact(city, (ferrara, 'Ferrara')).
 fact(city, (naples, 'Naples')).
 fact(city, (caen, 'Caen')).

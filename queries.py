@@ -7,7 +7,7 @@ def find_artwork_requirements(artwork, kb_path):
     query_related_artworks = "backward(rule(retrieve_related_artworks, ({}, Artworks)))".format(artwork)
     info = interface.query(query_aw_info)
     related_artworks = interface.query(query_related_artworks)
-    print(related_artworks)
+    return info, related_artworks
 
 
 def find_artist_requirements(artist, kb_path):
@@ -18,12 +18,13 @@ def find_artist_requirements(artist, kb_path):
     info = interface.query(query_artist_info)
     related_artists = interface.query(query_related_artists)
     related_styles = interface.query(query_related_styles)
+    return info, related_artists, related_styles
 
 
 def find_style_requirements(style, kb_path):
     interface = PrologInterface(kb_path)
     query_style_info = "backward(fact(style, ({}, Name, Yb, Ye, Field)))".format(style)
-    query_related_styles = "backward(rule(related_styles, ({}, Styles)))".format(style)
+    query_related_styles = "backward(rule(related_style, ({}, Styles)))".format(style)
     query_related_artists = "backward(rule(is_exponent, (Artist, {})))".format(style)
     info = interface.query(query_style_info)
     related_styles = interface.query(query_related_styles)
@@ -37,7 +38,7 @@ def find_church_requirements(church, kb_path):
     query_related_churches = "backward(rule(retrieve_related_churches, ({}, Churches)))".format(church)
     info = interface.query(query_church_info)
     related_churches = interface.query(query_related_churches)
-    print(related_churches)
+    return info, related_churches
 
 
 def find_artworks_names(kb_path):

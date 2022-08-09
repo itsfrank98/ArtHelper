@@ -1,5 +1,15 @@
 :- dynamic rule/2.
 :- multifile rule/3.
+/*
+[styles].
+[inference].
+[art].
+[museums].
+[rules_artworks].
+[utils].
+[cities].
+[people].
+*/
 
 %If the artwork is part of a composition, return the other artworks that are part of that composition
 rule(other_elements_composition,
@@ -55,14 +65,13 @@ rule(fresco_same_place,
 ).
 
 rule(retrieve_information_artwork, 
-    (A, Title, Year, City_name, Type, StyleNames, ArtistName, MainSubjectsNames, SecondarySubjectsNames, MuseumName, Desc),
+    (A, Title, Year, City_name, Type, StyleNames, Artist, MainSubjectsNames, SecondarySubjectsNames, MuseumName, Desc),
     [
         fact(artwork, (A, Title, Year, C, Type, Desc)),
         fact(city, (C, City_name)),
         fact(follows, (A, Styles)),
         call(convert_list_elements_to_names(Styles, StyleNames)),
         fact(author, (A, Artist)),
-        fact(artist, (Artist, ArtistName, _, _)),
         fact(main_subject, (A, MainSubjects)),
         call(convert_list_elements_to_names(MainSubjects, MainSubjectsNames)),
         fact(secondary_subject, (A, SecondarySubjects)),

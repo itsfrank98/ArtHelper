@@ -30,7 +30,7 @@ fact(influenced_by, (caravaggio, [tiziano])).
 fact(influenced_by, (tiziano, [raffaello, michelangelo])).
 
 fact(portrayable, (holy_mary, 'Holy Mary')).
-fact(portrayable, (st_joseph, 'Saint Joseph')).
+fact(portrayable, (st_joseph, 'St. Joseph')).
 fact(portrayable, (magi, 'Magi')).
 fact(portrayable, (adam, 'Adam')).
 fact(portrayable, (eve, 'Eve')).
@@ -39,14 +39,12 @@ fact(portrayable, (moses, 'Moses')).
 fact(portrayable, (zacharias, 'Zacharias')).
 fact(portrayable, (john_baptist, 'John the Baptist')).
 fact(portrayable, (jesus, 'Jesus Christ')).
-fact(portrayable, (giuditta, 'Giuditta')).
-fact(portrayable, (oloferne, 'Oloferne')).
-fact(portrayable, (clori, 'Clori')).
+fact(portrayable, (clori, 'Chloris')).
 fact(portrayable, (flora, 'Flora')).
 fact(portrayable, (zefiro, 'Zefiro')).
 fact(portrayable, (venere, 'Venere')).
 fact(portrayable, (mercurio, 'Mercurio')).
-fact(portrayable, (arianna, 'Arianna')).
+fact(portrayable, (arianna, 'Ariadne')).
 fact(portrayable, (bacchus, 'Bacchus')).
 fact(portrayable, (marte, 'Marte')).
 fact(portrayable, (fauni, 'Fauni')).
@@ -71,9 +69,9 @@ fact(portrayable, (bernardino_carda, 'Bernardino della Carda')).
 fact(portrayable, (michele_attendolo, 'Michele Attendolo')).
 fact(portrayable, (cupid, 'Cupid')).
 fact(portrayable, (grazie, 'Grazie')).
-fact(portrayable, (st_stephen, 'Saint Stephen')).
-fact(portrayable, (st_laurence, 'Saint Laurence')).
-fact(portrayable, (st_paul, 'Saint Paul')).
-fact(portrayable, (st_thomas, 'Saint Thomas')).
-fact(portrayable, (st_peter, 'Saint Peter')).
-fact(portrayable, (st_andrew, 'Saint Andrew')).
+fact(portrayable, (st_stephen, 'St. Stephen')).
+fact(portrayable, (st_laurence, 'St. Laurence')).
+fact(portrayable, (st_paul, 'St. Paul')).
+fact(portrayable, (st_thomas, 'St. Thomas')).
+fact(portrayable, (st_peter, 'St. Peter')).
+fact(portrayable, (st_andrew, 'St. Andrew')).

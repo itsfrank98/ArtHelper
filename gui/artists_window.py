@@ -45,7 +45,7 @@ def open(root: Toplevel):
 
     row = 0
     column = 0
-    artists = find_names(path="../kb", query="backward(fact(artist, (ID, Name, _, _)))")
+    artists = find_names(query="backward(fact(artist, (ID, Name, _, _)))", kb_path="../kb")
     # Create one canvas for each style and add it to the second frame
     for k in artists.keys():
         img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))

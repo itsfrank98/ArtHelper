@@ -22,7 +22,7 @@ fact(same_main_current, ([impressionism, post_impressionism])).
 fact(follows, (monna_lisa, [high_renaissance])). 
 fact(follows, (magi_adoration, [early_renaissance])).
 fact(follows, (magi_botticelli, [early_renaissance])).
-fact(follows, (doni, [high_renaissance])).
+fact(follows, (tondo_doni, [high_renaissance])).
 fact(follows, (athens_school, [high_renaissance])). 
 fact(follows, (raffaello_selfportrait, [high_renaissance])).
 fact(follows, (velata, [high_renaissance])).

@@ -9,7 +9,7 @@ img_directory = "images/styles"
 images = []     # Need to add images to a list otherwise they won't be displayed
 
 def answer_window(root, style):
-
+    pass
 
 
 def add_canvas(frame, button_text, img):
@@ -40,7 +40,7 @@ def open(root: Toplevel):
     second_frame = Frame(main_canvas)
     main_canvas.create_window((0,0), window=second_frame, anchor="nw")
 
-    styles = find_names(path="../kb", query="backward(fact(style, (ID, Name, _, _, _)))")
+    styles = find_names(kb_path="../kb", query="backward(fact(style, (ID, Name, _, _, _)))")
     # Create one canvas for each style and add it to the second frame
     for k in styles.keys():
         img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))

@@ -5,7 +5,7 @@
 fact(museum, (louvre, 'Louvre', paris)).
 fact(museum, (vatican_museums, 'Musei Vaticani', rome)).
 fact(museum, (uffizi, 'Galleria degli Uffizi', florence)).
-fact(museum, (vangogh, 'Van Gogh museum', amsterdam)).
+fact(museum, (vangogh_museum, 'Van Gogh museum', amsterdam)).
 fact(museum, (national_gallery, 'London national gallery', london)).
 fact(museum, (pitti, 'Palazzo Pitti', florence)).
 fact(museum, (borghese, 'Galleria borghese', rome)).
@@ -20,13 +20,13 @@ fact(church, (san_frediano, 'Chiesa di San Frediano in Cestello', florence, 1450
 fact(church, (santo_spirito, 'Basilica di Santo Spirito', florence, 1444, 1487)).
 fact(church, (orsanmichele, 'Chiesa di Orsanmichele', florence, 1337, 1380)).
 
-fact(owns, (uffizi, [raffaello_selfportrait, san_romano_uffizi, della_rovere_portrait, venere_birth, doni, magi_adoration, federico_montefeltro_portrait, battista_sforza_portrait, spring, cardellino, magi_botticelli, madonna_casini])).
+fact(owns, (uffizi, [raffaello_selfportrait, san_romano_uffizi, della_rovere_portrait, venere_birth, primavera, tondo_doni, magi_adoration, federico_montefeltro_portrait, battista_sforza_portrait, spring, madonna_cardellino, magi_botticelli, madonna_casini])).
 fact(owns, (pitti, [velata])).
 fact(owns, (borghese, [bacco])).
-fact(owns, (sistine_chapel, [adam_creation, universal_judice])).
+fact(owns, (sistine_chapel, [adam_creation, universal_judice, eve_creation])).
 fact(owns, (louvre, [monna_lisa, san_romano_louvre, madonna_piot])).
 fact(owns, (national_gallery, [sunflowers, venere_marte, madonna_garofani, bacco_arianna, san_romano_nationalgallery])).
-fact(owns, (vangogh_museum, [van_gogh_hat, van_gogh_while_painting, potato_eaters])).
+fact(owns, (vangogh_museum, [van_gogh_with_hat, van_gogh_while_painting, potato_eaters])).
 fact(owns, (vatican_rooms, [athens_school, sacrament_dispute])).
 fact(owns, (santa_maria_novella, [adam_animals_creation, eve_and_sin, holy_trinity])).
 
