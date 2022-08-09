@@ -10,7 +10,7 @@ fact(artist, (filippo_brunelleschi, 'Filippo di ser Brunellesco Lapi', 1377, 144
 fact(artist, (emilio_de_fabris, 'Emilio De Fabris', 1807, 1883)).
 fact(artist, (arnolfo_di_cambio, 'Arnolfo Di Cambio', 1245, 1308)).
 fact(artist, (raffaello, 'Raffaello Sanzio', 1483, 1520)).
-fact(artist, (sandro_botticelli, 'Alessandro di Mariano di Vanni Filipepi (Sandro Botticelli)', 1445, 1510)).
+fact(artist, (sandro_botticelli, 'Alessandro di Mariano di Vanni Filipepi', 1445, 1510)).
 fact(artist, (piero_della_francesca, 'Piero di Benedetto de\' Franceschi', 1412, 1492)).
 fact(artist, (caravaggio, 'Michelangelo Merisi', 1571, 1610)).
 fact(artist, (tiziano, 'Tiziano Vecellio', 1489, 1576)).

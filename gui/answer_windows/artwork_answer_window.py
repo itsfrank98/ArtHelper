@@ -2,7 +2,7 @@ from tkinter import *
 from queries import find_artwork_requirements
 from PIL import ImageTk, Image
 from gui.utils import create_or_set_root, create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
-
+#art_id = "adam_creation"
 def open(art_id):
     root = create_or_set_root("Artwork", "500x1000", False, False)
     frame = Frame(root)
@@ -51,7 +51,10 @@ def open(art_id):
     info_label.pack()
 
     if artworks:
-        aw_frame = add_frame_answer_window(frame, "\nOther artworks related to this", dict_list=artworks, key="Artworks")
+        aw_frame = add_frame_answer_window(frame, label_text="\nOther artworks related to this",
+                                           second_label_text="(Select an option and then click on the 'Why?' button to get an explanation)",
+                                           dict_list=artworks,
+                                           button_text="Why?",
+                                           key="Artworks")
 
     root.mainloop()
-

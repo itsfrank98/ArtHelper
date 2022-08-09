@@ -13,12 +13,19 @@ def find_artwork_requirements(artwork, kb_path):
 def find_artist_requirements(artist, kb_path):
     interface = PrologInterface(kb_path)
     query_artist_info = "backward(fact(artist, ({}, Name, Yb, Yd)))".format(artist)
-    query_related_artists = "backward(rule(retrieve_artist_influencers, ({}, Artists)))".format(artist)
-    query_related_styles = "backward(rule(is_exponent, ({}, Styles)))".format(artist)
+    query_related_artists = "backward(fact(influenced_by, ({}, Artists)))".format(artist)
+    query_related_styles = "backward(rule(is_exponent, ({}, Style)))".format(artist)
+    query_operas = "backward(fact(author, (Opera, {})))".format(artist)
+    query_places = "backward(rule(retrieve_artist_places, ({}, Opera)))".format(artist)
     info = interface.query(query_artist_info)
     related_artists = interface.query(query_related_artists)
     related_styles = interface.query(query_related_styles)
-    return info, related_artists, related_styles
+    styles = []
+    for s in related_styles['query_results']:
+        styles.append(s['Style'].replace("_", " ").title())
+    operas = interface.query(query_operas)
+    places = interface.query(query_places)
+    return info, related_artists, styles, operas, places
 
 
 def find_style_requirements(style, kb_path):
