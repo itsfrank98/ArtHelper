@@ -43,9 +43,11 @@ def find_church_requirements(church, kb_path):
     interface = PrologInterface(kb_path)
     query_church_info = "backward(rule(retrieve_church_information, ({}, CName, CityName, Yb, Ye, ArchitectsNames, StylesNames)))".format(church)
     query_related_churches = "backward(rule(retrieve_related_churches, ({}, Churches)))".format(church)
+    query_artworks = "backward(fact(owns, ({}, Artworks)))".format(church)
     info = interface.query(query_church_info)
     related_churches = interface.query(query_related_churches)
-    return info, related_churches
+    artworks = interface.query(query_artworks)
+    return info, related_churches, artworks
 
 
 def find_artworks_names(kb_path):

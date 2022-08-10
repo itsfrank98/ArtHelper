@@ -31,12 +31,11 @@ rule(churches_same_construction_years,
 ).
 
 rule(retrieve_church_information, 
-    (C, CName, CityName, Yb, Ye, ArchitectsNames, StylesNames),
+    (C, CName, CityName, Yb, Ye, Architects, StylesNames),
     [
         fact(church, (C, CName, City, Yb, Ye)),
         fact(city, (City, CityName)),
         fact(designed, (C, Architects)),
-        call(convert_list_elements_to_names(Architects, ArchitectsNames)),
         fact(follows, (C, Styles)),
         call(convert_list_elements_to_names(Styles, StylesNames))
     ]

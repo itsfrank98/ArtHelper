@@ -36,3 +36,4 @@ fact(designed, (santa_maria_novella, [filippo_brunelleschi, leon_battista_albert
 fact(designed, (san_frediano, [gherardo_silvani])).
 fact(designed, (santo_spirito, [filippo_brunelleschi, antonio_manetti])).
 fact(designed, (orsanmichele, [neri_fioravante])).
+fact(designed, (st_stephen, [])).
