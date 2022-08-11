@@ -31,11 +31,11 @@ def add_frame(root, label_text, dict_list, key):
 
 
 #style_id = 'romanic'
-def open(root, style_id):
-    root = create_or_set_root("Style", "500x800", False, True, root)
+def open(root, style_id, kb_path):
+    #root = create_or_set_root("Style", "500x800", False, True, root)
     frame = Frame(root)
     frame.pack()
-    info, related_styles, related_artists = find_style_requirements(style_id, '../kb')
+    info, related_styles, related_artists = find_style_requirements(style_id, kb_path=kb_path)
 
     info = info['query_results'][0]
     styles = related_styles['query_results']

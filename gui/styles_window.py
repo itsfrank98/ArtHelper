@@ -2,22 +2,26 @@ from tkinter import *
 from PIL import ImageTk, Image
 import os
 from queries import find_names, find_style_requirements
+from answer_windows import styles_answer_window
+from utils import create_or_set_root
 
 width = 15
 height = 1
 img_directory = "images/styles"
 images = []     # Need to add images to a list otherwise they won't be displayed
 
-def answer_window(root, style):
-    pass
+def open_style_answer_window(root, style_id):
+    new_window = Toplevel(root)
+    new_window = create_or_set_root("Style", "500x800", False, False, new_window)
+    styles_answer_window.open(new_window, style_id, kb_path="../kb")
 
 
-def add_canvas(frame, button_text, img):
+def add_canvas(frame, button_text, img, root, style_id):
     c = Canvas(frame, width=500, height=100)
     c.pack(fill=X, expand=True)
     bg = c.create_image(80, 50, image=img)
     btn = Button(frame, text=button_text, width=width, height=height, background='black', fg="white")
-    ########BIND HERE
+    btn.bind("<Button>", lambda e: open_style_answer_window(root, style_id))
     c.create_window(130, 30, window=btn, anchor="nw")
 
 
@@ -46,7 +50,7 @@ def open(root: Toplevel):
         img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))
         images.append(img)
         btn_text = styles[k]
-        add_canvas(second_frame, btn_text, img)
+        add_canvas(second_frame, btn_text, img, root, style_id=k)
     main_canvas.pack()
 
     root.mainloop()

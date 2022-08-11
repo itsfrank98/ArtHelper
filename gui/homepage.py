@@ -3,6 +3,7 @@ from PIL import ImageTk, Image
 import artists_window, styles_window
 from WindowWithCombobox import WindowWithCombobox
 from utils import create_or_set_root
+from gui.answer_windows import artwork_answer_window, churches_answer_window
 
 def openStylesWindow(root):
     new_window = Toplevel(root)
@@ -14,11 +15,30 @@ def openArtistsWindow(root):
     artists_window.open(new_window)
 def openArtWindow(root):
     new_window = Toplevel(root)
-    new_window = WindowWithCombobox("Artworks", "images/art_window_bg.png", "Choose an artwork", "backward(fact(artwork, (ID, Name, _, _, _, _)))", "../kb", 350, 80, new_window)
+    new_window = WindowWithCombobox(title="Artworks",
+                                    bg_image_name="images/art_window_bg.png",
+                                    text="Choose an artwork",
+                                    query="backward(fact(artwork, (ID, Name, _, _, _, _)))",
+                                    kb_path="../kb",
+                                    x=350, y=80,
+                                    answer_window=artwork_answer_window,
+                                    answer_window_title="Artwork",
+                                    answer_window_dimensions="500x1000",
+                                    root=new_window)
     new_window.create_window()
 def openChurchesWindow(root):
     new_window = Toplevel(root)
-    new_window = WindowWithCombobox("Churches", "images/churches_window_bg.png", "Choose a church", "backward(fact(church, (ID, Name, _, _, _)))", "../kb", 150, 200, new_window)
+    new_window = WindowWithCombobox(title="Churches",
+                                    bg_image_name="images/churches_window_bg.png",
+                                    text="Choose a church",
+                                    query="backward(fact(church, (ID, Name, _, _, _)))",
+                                    kb_path="../kb",
+                                    x=150,
+                                    y=200,
+                                    answer_window=churches_answer_window,
+                                    answer_window_title="Church",
+                                    answer_window_dimensions="500x800",
+                                    root=new_window)
     new_window.create_window()
 
 

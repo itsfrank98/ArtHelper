@@ -5,7 +5,7 @@ from gui.utils import create_or_set_root, create_title_label, add_frame_answer_w
 
 #church_id = "st_stephen"
 def open(church_id, root):
-    root = create_or_set_root("Church", "500x800", False, False)
+    #root = create_or_set_root("Church", "500x800", False, False)
     frame = Frame(root)
     frame.pack()
     info, related_churches, artworks = find_church_requirements(church_id, kb_path="../../kb")

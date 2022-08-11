@@ -4,7 +4,7 @@ from PIL import ImageTk, Image
 from gui.utils import create_or_set_root, create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
 #art_id = "adam_creation"
 def open(art_id, root):
-    root = create_or_set_root("Artwork", "500x1000", False, False)
+    #root = create_or_set_root("Artwork", "500x1000", False, False)
     frame = Frame(root)
     frame.pack()
     info, aw = find_artwork_requirements(art_id, kb_path="../../kb")
