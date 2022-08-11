@@ -24,6 +24,7 @@ def openArtWindow(root):
                                     answer_window=artwork_answer_window,
                                     answer_window_title="Artwork",
                                     answer_window_dimensions="500x1000",
+                                    answer_img_path="images/art",
                                     root=new_window)
     new_window.create_window()
 def openChurchesWindow(root):
@@ -38,6 +39,7 @@ def openChurchesWindow(root):
                                     answer_window=churches_answer_window,
                                     answer_window_title="Church",
                                     answer_window_dimensions="500x800",
+                                    answer_img_path="answer_windows/churches_low_res",
                                     root=new_window)
     new_window.create_window()
 

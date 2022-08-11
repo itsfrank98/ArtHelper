@@ -1,14 +1,15 @@
+import os.path
 from tkinter import *
 from PIL import ImageTk, Image
 from queries import find_church_requirements
 from gui.utils import create_or_set_root, create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
 
 #church_id = "st_stephen"
-def open(church_id, root):
+def open(id, root, kb_path, img_path):
     #root = create_or_set_root("Church", "500x800", False, False)
     frame = Frame(root)
     frame.pack()
-    info, related_churches, artworks = find_church_requirements(church_id, kb_path="../../kb")
+    info, related_churches, artworks = find_church_requirements(id, kb_path=kb_path)
 
     info = info['query_results'][0]
     related_churches = related_churches['query_results']
@@ -18,7 +19,7 @@ def open(church_id, root):
     lbl = create_title_label(frame, text=name, fontsize=15)
     lbl.pack()
 
-    img = ImageTk.PhotoImage(Image.open("churches_low_res/{}.png".format(church_id)))
+    img = ImageTk.PhotoImage(Image.open(os.path.join(img_path, "{}.png".format(id))))
     c = Canvas(frame, width=450, height=300)
     c.pack()
     bg = c.create_image(150, 180, image=img)

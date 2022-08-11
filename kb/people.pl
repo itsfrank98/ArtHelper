@@ -75,3 +75,4 @@ fact(portrayable, (st_paul, 'St. Paul')).
 fact(portrayable, (st_thomas, 'St. Thomas')).
 fact(portrayable, (st_peter, 'St. Peter')).
 fact(portrayable, (st_andrew, 'St. Andrew')).
+fact(portrayable, (st_john, 'St. John the apostole')).

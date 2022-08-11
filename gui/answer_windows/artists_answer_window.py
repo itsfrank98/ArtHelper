@@ -2,7 +2,7 @@ import os.path
 from tkinter import *
 from PIL import ImageTk, Image
 from queries import find_artist_requirements
-from gui.utils import create_or_set_root, create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
+from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
 
 #TODO: implementare finestra che apre un artwork o un posto in questo file
 
@@ -52,6 +52,7 @@ def open(root, artist_id, kb_path, img_directory):
                                 second_label_text="(Select an option and then click on the 'Go!' button to see the opera)",
                                 dict_list=works,
                                 button_text="Go!",
-                                key="Opera")
+                                key="Opera",
+                                lb_height=6)
 
     root.mainloop()

@@ -11,7 +11,7 @@ from utils import create_or_set_root
 from queries import find_names
 
 class WindowWithCombobox():
-    def __init__(self, title, bg_image_name, text, query, kb_path, x, y, answer_window, answer_window_title, answer_window_dimensions, root=None):
+    def __init__(self, title, bg_image_name, text, query, kb_path, x, y, answer_window, answer_window_title, answer_window_dimensions, answer_img_path, root=None):
         self.bg_image_name = bg_image_name
         self.query = query
         self.text = text
@@ -23,9 +23,10 @@ class WindowWithCombobox():
         self.root = root
         self.root.geometry("400x500")
         self.root.title(title)
-        self.open_answer_window = answer_window
+        self.answer_window = answer_window
         self.a_w_title = answer_window_title
         self.a_w_dimensions = answer_window_dimensions
+        self.answer_img_path = answer_img_path
 
     def retrieve(self):
         choose = self.box.get()
@@ -36,7 +37,12 @@ class WindowWithCombobox():
     def open_answer_window(self):
         new_window = Toplevel(self.root)
         new_window = create_or_set_root(self.a_w_title, self.a_w_dimensions, False, False, new_window)
-        self.open_answer_window.open(new_window)
+        name = self.box.get()
+        for i in self.id_names:
+            if self.id_names[i] == name:
+                id = i
+                break
+        self.answer_window.open(root=new_window, id=id, kb_path=self.kb_path, img_path=self.answer_img_path)
 
     def create_window(self):
         frame = Frame(self.root)
@@ -51,6 +57,7 @@ class WindowWithCombobox():
         self.box = Combobox(frame, values=sorted(list(self.id_names.values())), width=30)
         canvas.create_window(70, 200, window=self.box, anchor='nw')
 
-        btn = Button(frame, text="Go!", width=5, height=1, background='black', fg='white', command=self.retrieve)
+        btn = Button(frame, text="Go!", width=5, height=1, background='black', fg='white', command=self.open_answer_window)
+        btn.bind("<Button>", lambda e: self.open_answer_window())
         canvas.create_window(170, 280, window=btn, anchor="nw")
         self.root.mainloop()

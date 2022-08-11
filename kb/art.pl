@@ -33,7 +33,7 @@ fact(artwork, (adam_animals_creation, 'Creazione degli animali e di Adamo', 1420
 fact(artwork, (eve_and_sin, 'Creazione di Eva e il Peccato originale', 1420, florence, fresco, 'God creates Eve, portrayal of the original sin')).
 fact(artwork, (magi_botticelli, 'Adorazione dei Magi (Botticelli)', 1475, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
 fact(artwork, (universal_judice, 'Giudizio Universale', 1541, rome, fresco, 'The fresco decorates the wall behind the altar in the Sistine Chapel. The \nscene depicts the end of times, when there will be the second come of \nChrist and there will be the eternal judgment from God on all the humanity, \nto open the kingdom of Heaven.')).
-fact(artwork, (holy_trinity, 'DDSanta trinità', 1428, florence, fresco, 'Virgin, saint John and crucifixed Jesus')).
+fact(artwork, (holy_trinity, 'Santa trinità', 1428, florence, fresco, 'Virgin, saint John and crucifixed Jesus')).
 fact(artwork, (madonna_casini, 'Madonna del Solletico', 1426, florence, painting, 'The Virgin, blessing her Child with two fingers, tickles Jesus, who laughs')).
 
 fact(composition, ([battista_sforza_portrait, federico_montefeltro_portrait])).

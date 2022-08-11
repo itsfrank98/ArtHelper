@@ -1,13 +1,14 @@
 from tkinter import *
 from queries import find_artwork_requirements
 from PIL import ImageTk, Image
-from gui.utils import create_or_set_root, create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
+import os
+from gui.utils import create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
 #art_id = "adam_creation"
-def open(art_id, root):
+def open(id, root, kb_path, img_path):
     #root = create_or_set_root("Artwork", "500x1000", False, False)
     frame = Frame(root)
     frame.pack()
-    info, aw = find_artwork_requirements(art_id, kb_path="../../kb")
+    info, aw = find_artwork_requirements(id, kb_path=kb_path)
 
     info = info['query_results'][0]
     artworks = aw['query_results']
@@ -16,7 +17,7 @@ def open(art_id, root):
     lbl = create_title_label(frame, text=title, fontsize=15)
     lbl.pack()
 
-    img = ImageTk.PhotoImage(Image.open("../images/art/{}.png".format(art_id)))
+    img = ImageTk.PhotoImage(Image.open(os.path.join(img_path, "{}.png".format(id))))
     c = Canvas(frame, width=450, height=400)
     c.pack()
     bg = c.create_image(200, 300, image=img)
