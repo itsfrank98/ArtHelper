@@ -3,6 +3,7 @@ from queries import find_artwork_requirements
 from PIL import ImageTk, Image
 import os
 from gui.utils import create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
+
 #art_id = "adam_creation"
 def open(id, root, kb_path, img_path):
     #root = create_or_set_root("Artwork", "500x1000", False, False)
@@ -56,6 +57,8 @@ def open(id, root, kb_path, img_path):
                                 second_label_text="(Select an option and then click on the 'Why?' button to get an explanation)",
                                 dict_list=artworks,
                                 button_text="Why?",
-                                key="Artworks")
+                                key="Artworks",
+                                img_path="images/art",
+                                open_window_file=None)
 
     root.mainloop()

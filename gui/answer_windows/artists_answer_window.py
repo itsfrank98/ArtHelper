@@ -3,6 +3,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 from queries import find_artist_requirements
 from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
+from gui.answer_windows import artwork_answer_window
 
 #TODO: implementare finestra che apre un artwork o un posto in questo file
 
@@ -53,6 +54,7 @@ def open(root, artist_id, kb_path, img_directory):
                                 dict_list=works,
                                 button_text="Go!",
                                 key="Opera",
-                                lb_height=6)
+                                lb_height=6, expl=False, answer_win_title="Artwork", answer_win_dimensions="500x1000",
+                                open_window_file=artwork_answer_window, kb_path="../kb", img_path="images/art")
 
     root.mainloop()
