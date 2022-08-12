@@ -3,7 +3,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 from queries import find_artist_requirements
 from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
-from gui.answer_windows import artwork_answer_window
+from gui.answer_windows import artwork_answer_window, churches_answer_window
 
 #TODO: implementare finestra che apre un artwork o un posto in questo file
 
@@ -19,7 +19,7 @@ def open(root, artist_id, kb_path, img_directory):
     related_artists = related_artists['query_results']
     artworks = artworks['query_results']
     places = places['query_results']
-    works = artworks + places
+    print(places)
 
     name = info['Name']
     lbl = create_title_label(frame, text=name, fontsize=15)
@@ -47,14 +47,23 @@ def open(root, artist_id, kb_path, img_directory):
     info_label = Label(frame, text=general_info)
     info_label.pack()
 
-    if works:
+    if artworks:
         add_frame_answer_window(frame,
-                                "Operas by this artist",
+                                "Artworks by this artist",
                                 second_label_text="(Select an option and then click on the 'Go!' button to see the opera)",
-                                dict_list=works,
+                                dict_list=artworks,
                                 button_text="Go!",
-                                key="Opera",
+                                key="Artwork",
                                 lb_height=6, expl=False, answer_win_title="Artwork", answer_win_dimensions="500x1000",
                                 open_window_file=artwork_answer_window, kb_path="../kb", img_path="images/art")
+    if places:
+        add_frame_answer_window(frame,
+                                "Churches designed by this artist",
+                                second_label_text="(Select an option and then click on the 'Go!' button to see the opera)",
+                                dict_list=places,
+                                button_text="Go!",
+                                key="Opera",
+                                lb_height=6, expl=False, answer_win_title="Church", answer_win_dimensions="500x800",
+                                open_window_file=churches_answer_window, kb_path="../kb", img_path="answer_windows/churches_low_res")
 
     root.mainloop()

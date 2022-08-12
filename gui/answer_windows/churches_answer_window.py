@@ -2,7 +2,8 @@ import os.path
 from tkinter import *
 from PIL import ImageTk, Image
 from queries import find_church_requirements
-from gui.utils import create_or_set_root, create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
+from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
+from gui.answer_windows import artwork_answer_window
 
 #church_id = "st_stephen"
 def open(id, root, kb_path, img_path):
@@ -58,6 +59,16 @@ def open(id, root, kb_path, img_path):
                                 dict_list=artworks,
                                 button_text="Go!",
                                 lb_height=4,
-                                key="Artworks")
+                                key="Artworks",
+                                img_path="images/art",
+                                open_window_file=artwork_answer_window,
+                                expl=False,
+                                answer_win_title="Artwork",
+                                answer_win_dimensions="500x1000",
+                                kb_path="../kb"
+                                )
+
+
+
 
     root.mainloop()

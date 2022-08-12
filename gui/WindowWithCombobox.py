@@ -28,12 +28,6 @@ class WindowWithCombobox():
         self.a_w_dimensions = answer_window_dimensions
         self.answer_img_path = answer_img_path
 
-    def retrieve(self):
-        choose = self.box.get()
-        for k in self.id_names.keys():
-            if self.id_names[k] == choose:
-                print(k)
-
     def open_answer_window(self):
         new_window = Toplevel(self.root)
         new_window = create_or_set_root(self.a_w_title, self.a_w_dimensions, False, False, new_window)

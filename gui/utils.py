@@ -80,7 +80,7 @@ def add_frame_answer_window(root, label_text, second_label_text, dict_list, key,
             l.append(item)
             i += 1
     lb.pack()
-    id="monna_lisa"
+
     def selected_item():
         for j in lb.curselection():
             id = lb.get(j)
