@@ -2,7 +2,7 @@
 :- multifile rule/3.
 
 rule(churches_same_style_and_city,
-    (C1, C2),
+    (C1, C2, City, Intersection),
     [
         fact(church, (C1, _, City, _, _)),
         fact(follows, (C1, S1)),
@@ -17,7 +17,7 @@ rule(churches_same_style_and_city,
 
 /*Given a church, this rule will find the churches that were built during the same years in the same city*/
 rule(churches_same_construction_years,
-    (C1, C2),
+    (C1, C2, City),
     [
         fact(church, (C1, _, City, Yb1, Ye1)),
         call(!),
@@ -43,7 +43,8 @@ rule(retrieve_church_information,
 rule(retrieve_related_churches,
     (C, Churches),
     [
-        rule(churches_same_style_and_city, (C, Churches))
+        rule(churches_same_style_and_city, (C, Churches, City, Intersection))
+        
     ]
 ).
 rule(retrieve_related_churches,

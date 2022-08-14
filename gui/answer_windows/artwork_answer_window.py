@@ -5,7 +5,7 @@ import os
 from gui.utils import create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
 
 #art_id = "adam_creation"
-def open(id, root, kb_path, img_path):
+def open(root, id, kb_path, img_path):
     #root = create_or_set_root("Artwork", "500x1000", False, False)
     frame = Frame(root)
     frame.pack()

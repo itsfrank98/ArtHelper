@@ -42,12 +42,14 @@ def find_style_requirements(style, kb_path):
 def find_church_requirements(church, kb_path):
     interface = PrologInterface(kb_path)
     query_church_info = "backward(rule(retrieve_church_information, ({}, CName, CityName, Yb, Ye, ArchitectsNames, StylesNames)))".format(church)
-    query_related_churches = "backward(rule(retrieve_related_churches, ({}, Churches)))".format(church)
+    query_same_construction_years = "backward(rule(churches_same_construction_years, ({}, Churches, City)))".format(church)
+    query_same_style_and_city = "backward(rule(churches_same_style_and_city, ({}, Churches, City, Styles)))".format(church)
     query_artworks = "backward(fact(owns, ({}, Artworks)))".format(church)
     info = interface.query(query_church_info)
-    related_churches = interface.query(query_related_churches)
+    same_construction_years = interface.query(query_same_construction_years)
+    same_style_and_city = interface.query(query_same_style_and_city)
     artworks = interface.query(query_artworks)
-    return info, related_churches, artworks
+    return info, same_construction_years, same_style_and_city, artworks
 
 
 def find_artworks_names(kb_path):
