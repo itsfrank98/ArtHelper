@@ -18,7 +18,7 @@ class PrologInterface():
         """
         Runs the desired query, returning both the results and the explanations.
         :param query: Query to run
-        :return: results
+        :return: results with explanations
         """
         results = {}
         results['query_results'] = list(self.prolog.query(query))
@@ -28,5 +28,3 @@ class PrologInterface():
         except pyswip.prolog.PrologError:
             results['explanations'] = []
         return results
-
-
