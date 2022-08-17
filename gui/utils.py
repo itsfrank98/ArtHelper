@@ -109,7 +109,6 @@ def add_frame_answer_window(root, label_text, second_label_text, dict_list, key,
                 for d in expl:
                     if d['X'][0].value.__contains__(id):    #The dictionary contains the list of rules used. It is like a stack, so the last used rule is the first in the list. So in order to know if the rule concerns the item of interest we just have to check the first element ans see if it contains the id
                         selected_item_explanations.append(d)
-                print(selected_item_explanations[0]['X'][0].value)
                 explain_answer_window(root=root, title="Explanation", dimensions="500x300", id=id, name=name,
                                       window=open_window_file, explanations=selected_item_explanations)
 

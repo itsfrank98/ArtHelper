@@ -94,25 +94,14 @@ rule(influenced_same_current, (S1, S2),
 /*
 The second rule is: if there is a monument or an artwork that follows more than one style, then the oldest influenced the youngest.
 */
-rule(influenced_same_art, (S1, S2),
+rule(influenced_same_art, (S1, S2, A),
     [
         fact(style, (S1, _, Yb1, _, _)),
         call(!),
         fact(style, (S2, _, Yb2, _, _)),
         call(Yb1 > Yb2),
-        fact(follows, (_, S)),
+        fact(follows, (A, S)),
         call(member(S1, S)),
         call(member(S2, S))
     ]
-).
-
-%apply the previous rules to find all the styles that a person needs to know in order to best understand a style
-rule(related_style, (S, S1),
-    [rule(co_existing_styles, (S, S1))]
-).
-rule(related_style, (S, S1),
-    [rule(influenced_by, (S, S1))]
-).
-rule(related_style, (S, S1),
-    [rule(influenced_same_art, (S, S1))]
 ).

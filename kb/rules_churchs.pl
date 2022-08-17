@@ -2,7 +2,7 @@
 :- multifile rule/3.
 
 rule(churches_same_style_and_city,
-    (C1, C2, City, Intersection),
+    (C1, C2, City, StyleNames),
     [
         fact(church, (C1, _, City, _, _)),
         fact(follows, (C1, S1)),
@@ -11,7 +11,8 @@ rule(churches_same_style_and_city,
         call(C1 \= C2),
         fact(follows, (C2, S2)),
         call(list_intersect(S1, S2, Intersection)),
-        call(Intersection \= [])
+        call(Intersection \= []),
+        call(convert_list_elements_to_names(Intersection, StyleNames))
     ]
 ).
 
@@ -38,18 +39,5 @@ rule(retrieve_church_information,
         fact(designed, (C, Architects)),
         fact(follows, (C, Styles)),
         call(convert_list_elements_to_names(Styles, StylesNames))
-    ]
-).
-rule(retrieve_related_churches,
-    (C, Churches),
-    [
-        rule(churches_same_style_and_city, (C, Churches, City, Intersection))
-        
-    ]
-).
-rule(retrieve_related_churches,
-    (C, Churches),
-    [
-        rule(churches_same_construction_years, (C, Churches))
     ]
 ).

@@ -1,6 +1,7 @@
 from tkinter import *
 from queries import find_style_requirements
-from gui.utils import create_or_set_root, create_title_label, add_frame_answer_window
+from gui.utils import create_title_label, add_frame_answer_window
+from gui.answer_windows import explanation_window
 
 
 def add_frame(root, label_text, dict_list, key):
@@ -35,10 +36,11 @@ def open(root, style_id, kb_path):
     #root = create_or_set_root("Style", "500x800", False, True, root)
     frame = Frame(root)
     frame.pack()
-    info, related_styles, related_artists = find_style_requirements(style_id, kb_path=kb_path)
+    info, coexisting_styles, same_current, same_art, related_artists = find_style_requirements(style_id, kb_path=kb_path)
 
     info = info['query_results'][0]
-    styles = related_styles['query_results']
+    related_styles = coexisting_styles['query_results'] + same_current['query_results'] + same_art['query_results']
+    related_styles_explanations = coexisting_styles['explanations'] + same_current['explanations'] + same_art['explanations']
     artists = related_artists['query_results']
 
     style_name = info['Name']
@@ -49,19 +51,23 @@ def open(root, style_id, kb_path):
     info_label.pack()
 
     ### STYLES
-    if styles:
+    if related_styles:
         add_frame_answer_window(root,
                                 label_text="\n\nStyles related to {}".format(style_name),
                                 second_label_text="(Select an option and then click on the 'Why?' button to get an explanation)",
-                                dict_list=styles,
+                                dict_list=related_styles,
                                 button_text="Why?",
-                                key="Styles")
+                                key="Styles",
+                                expl=related_styles_explanations,
+                                open_window_file=explanation_window)
     if artists:
         add_frame_answer_window(root,
                                 label_text="\n\nArtists exponent of this style",
                                 second_label_text="(Select an option and then click on the 'Why?' button to get an explanation)",
                                 dict_list=artists,
                                 button_text="Why?",
-                                key="Artist")
+                                key="Artist",
+                                expl=related_artists['explanations'],
+                                open_window_file=explanation_window)
 
     root.mainloop()

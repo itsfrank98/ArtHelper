@@ -26,7 +26,7 @@ class PrologInterface():
             results['explanations'] = list(self.prolog.query("used(X)"))
             self.prolog.query("retractall(used(X))")    # We retract everything regarding the explanations, because the explanations provided for the current query will not be useful for the next one
         except pyswip.prolog.PrologError:
-            pass
+            results['explanations'] = []
         return results
 
 
