@@ -88,20 +88,3 @@ new_rule(L, []) :-
 new_rule(L, R) :-
     R \= [],
     asserta(rule(L, R)).
-
-/*
-:- dynamic member/2.
-member(X,[X|L]).
-member(X,[Y|L]) :- member(X,L).
-
-:- dynamic delete/3.
-delete(X,[],[]).
-delete(X,[X|L],M) :- delete(X,L,M).
-delete(X,[Y|L],[Y|M]) :- not(X=Y), delete(X,L,M).
-*/
-
-
-
-    
-
-

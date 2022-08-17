@@ -1,5 +1,8 @@
 from tkinter import *
 
+def format_id(id):
+    return id.replace("_", " ").title()
+
 def create_or_set_root(title: str, geometry: str, resizable_1: bool, resizable_2: bool, root: Toplevel = None):
     if not root:
         root = Tk()
@@ -13,7 +16,7 @@ def create_title_label(frame, text, fontsize):
 
 def convert_atoms_to_values(l: list):
     for i in range(len(l)):
-        l[i] = l[i].value.replace("_", " ").title()
+        l[i] = format_id(l[i].value)
     return l
 
 def print_list(text, l):
@@ -35,7 +38,7 @@ def go_answer_window(root, title, dimensions, id, window, kb_path, img_path):
     new_window = create_or_set_root(title, dimensions, False, False, new_window)
     window.open(new_window, id, kb_path, img_path)
 
-def explain_answer_window(root, title, dimensions, id, name, window, explanations):
+def explain_answer_window(root, title, dimensions, current_item_name, id, name, window, explanations):
     """
     Open a window containing the explanation that lead the system to say that an item is related to the current one.
     :param root: Root
@@ -49,12 +52,12 @@ def explain_answer_window(root, title, dimensions, id, name, window, explanation
     """
     new_window = Toplevel(root)
     new_window = create_or_set_root(title, dimensions, False, False, new_window)
-    window.open(new_window, id, name, explanations)
+    window.open(new_window, current_item_name, id, name, explanations)
 
 
 def add_frame_answer_window(root, label_text, second_label_text, dict_list, key, button_text, img_path=None, open_window_file=None,
                             lb_width=25, lb_height=9, expl=None, answer_win_title="Explanation",
-                            answer_win_dimensions="300x300", kb_path="../kb"):
+                            answer_win_dimensions="300x300", kb_path="../kb", current_item_name=None):
     """
     Add, in the window, a frame containing a listbox with some items. The listbox can be used to select and visualize the item itself, or
     to get an explanation on why the item was put in the listbox
@@ -90,9 +93,9 @@ def add_frame_answer_window(root, label_text, second_label_text, dict_list, key,
         if item not in l:
             if type(item) == list:  # Some rules, such as other_elements_composition (in rules_artworks.pl file) can return a list of functors
                 for elem in item:
-                    lb.insert(i, elem.value.split(".")[0].replace("_", " ").title())
+                    lb.insert(i, format_id(elem.value.split(".")[0]))
             else:
-                lb.insert(i, item.split(".")[0].replace("_", " ").title())
+                lb.insert(i, format_id(item.split(".")[0]))
             l.append(item)
             i += 1
     lb.pack()
@@ -109,8 +112,8 @@ def add_frame_answer_window(root, label_text, second_label_text, dict_list, key,
                 for d in expl:
                     if d['X'][0].value.__contains__(id):    #The dictionary contains the list of rules used. It is like a stack, so the last used rule is the first in the list. So in order to know if the rule concerns the item of interest we just have to check the first element ans see if it contains the id
                         selected_item_explanations.append(d)
-                explain_answer_window(root=root, title="Explanation", dimensions="500x300", id=id, name=name,
-                                      window=open_window_file, explanations=selected_item_explanations)
+                explain_answer_window(root=root, title="Explanation", dimensions="700x200", id=id, name=name,
+                                      window=open_window_file, explanations=selected_item_explanations, current_item_name=current_item_name)
 
     btn = Button(frame, text=button_text, command=selected_item)
 

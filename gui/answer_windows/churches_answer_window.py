@@ -10,7 +10,7 @@ from gui.answer_windows import artwork_answer_window, explanation_window
 kb_path = "../../kb"
 img_path = "churches_low_res"'''
 def open(id, root, kb_path, img_path):
-    root = create_or_set_root("Church", "500x800", False, False, root)
+    #root = create_or_set_root("Church", "500x800", False, False, root)
     frame = Frame(root)
     frame.pack()
     info, same_construction_years, same_style_and_city, artworks = find_church_requirements(id, kb_path=kb_path)
@@ -59,7 +59,9 @@ def open(id, root, kb_path, img_path):
                                 open_window_file=explanation_window,
                                 expl=related_churches_explanations,
                                 answer_win_title="Explanation",
-                                answer_win_dimensions="500x300")
+                                answer_win_dimensions="500x300",
+                                current_item_name=name
+                                )
     if artworks:
         add_frame_answer_window(frame, label_text="\nArtworks held in this church",
                                 second_label_text="(Select an option and then click on the 'Go!' button to see the artwork)",
@@ -72,7 +74,8 @@ def open(id, root, kb_path, img_path):
                                 expl=False,
                                 answer_win_title="Artwork",
                                 answer_win_dimensions="500x1000",
-                                kb_path="../kb"
+                                kb_path="../kb",
+                                current_item_name=name
                                 )
 
     root.mainloop()

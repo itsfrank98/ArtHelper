@@ -3,7 +3,7 @@ from PIL import ImageTk, Image
 import os
 from queries import find_names
 from answer_windows import artists_answer_window
-from utils import create_or_set_root
+from utils import create_or_set_root, format_id
 
 width = 10
 height = 1
@@ -58,7 +58,7 @@ def open(root: Toplevel):
     for k in artists.keys():
         img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))
         images.append(img)
-        text = k.replace("_", " ").title()    # Here I could simply use the "Name" field of the dictionary but I chose not to since some artists like have very long names, ie Caravaggio's real name is Alessandro di Mariano di Vanni Filipepi
+        text = format_id(k)   # Here I could simply use the "Name" field of the dictionary but I chose not to since some artists like have very long names, ie Caravaggio's real name is Alessandro di Mariano di Vanni Filipepi
         add_canvas(row, column, second_frame, text, img, root, k)
         column += 1
     main_canvas.pack(fill=X)

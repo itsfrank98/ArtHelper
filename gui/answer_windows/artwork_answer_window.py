@@ -2,7 +2,7 @@ from tkinter import *
 from queries import find_artwork_requirements
 from PIL import ImageTk, Image
 import os
-from gui.utils import create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window
+from gui.utils import create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window, format_id
 from gui.answer_windows import explanation_window
 
 #art_id = "adam_creation"
@@ -11,7 +11,6 @@ def open(root, id, kb_path, img_path):
     frame = Frame(root)
     frame.pack()
     info, other, same_subject, same_place = find_artwork_requirements(id, kb_path=kb_path)
-
     info = info['query_results'][0]
     related_artworks = other['query_results'] + same_subject['query_results'] + same_place['query_results']
     related_artworks_explanations = other['explanations'] + same_subject['explanations'] + same_place['explanations']
@@ -28,7 +27,7 @@ def open(root, id, kb_path, img_path):
     city = info['City_name']
     year = info['Year']
     desc = info['Desc']
-    author = info['ArtistName'].replace("_", " ").title()
+    author = format_id(info['ArtistName'])
     style = info['StyleNames']  # List of atoms
     museum = info['MuseumName']
     main_subject = info['MainSubjectsNames']    # List of atoms
@@ -61,6 +60,7 @@ def open(root, id, kb_path, img_path):
                                 key="Artworks",
                                 img_path="images/art",
                                 expl=related_artworks_explanations,
-                                open_window_file=explanation_window)
+                                open_window_file=explanation_window,
+                                current_item_name=title)
 
     root.mainloop()

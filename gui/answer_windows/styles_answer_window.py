@@ -1,6 +1,6 @@
 from tkinter import *
 from queries import find_style_requirements
-from gui.utils import create_title_label, add_frame_answer_window
+from gui.utils import create_title_label, add_frame_answer_window, format_id
 from gui.answer_windows import explanation_window
 
 
@@ -17,7 +17,7 @@ def add_frame(root, label_text, dict_list, key):
     for d in dict_list:
         item = d[key]
         if item not in l:
-            lb.insert(i, item.split(".")[0].replace("_", " ").title())
+            lb.insert(i, format_id(item.split(".")[0]))
             l.append(item)
             i += 1
     lb.pack()
@@ -53,13 +53,15 @@ def open(root, style_id, kb_path):
     ### STYLES
     if related_styles:
         add_frame_answer_window(root,
-                                label_text="\n\nStyles related to {}".format(style_name),
+                                label_text="\n\nStyles pre-required for {}".format(style_name),
                                 second_label_text="(Select an option and then click on the 'Why?' button to get an explanation)",
                                 dict_list=related_styles,
                                 button_text="Why?",
                                 key="Styles",
                                 expl=related_styles_explanations,
-                                open_window_file=explanation_window)
+                                open_window_file=explanation_window,
+                                current_item_name=style_name
+                                )
     if artists:
         add_frame_answer_window(root,
                                 label_text="\n\nArtists exponent of this style",
@@ -68,6 +70,7 @@ def open(root, style_id, kb_path):
                                 button_text="Why?",
                                 key="Artist",
                                 expl=related_artists['explanations'],
-                                open_window_file=explanation_window)
+                                open_window_file=explanation_window,
+                                current_item_name=style_name)
 
     root.mainloop()

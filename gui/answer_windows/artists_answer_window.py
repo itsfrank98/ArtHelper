@@ -43,7 +43,6 @@ def open(root, artist_id, kb_path, img_directory):
     if related_styles:
         general_info += print_list("\nStyle(s) followed: ", related_styles)
 
-
     info_label = Label(frame, text=general_info)
     info_label.pack()
 
@@ -53,7 +52,7 @@ def open(root, artist_id, kb_path, img_directory):
                                 second_label_text="(Select an option and then click on the 'Go!' button to see the opera)",
                                 dict_list=artworks,
                                 button_text="Go!",
-                                key="Artwork",
+                                key="Opera",
                                 lb_height=6, expl=False, answer_win_title="Artwork", answer_win_dimensions="500x1000",
                                 open_window_file=artwork_answer_window, kb_path="../kb", img_path="images/art")
     if places:

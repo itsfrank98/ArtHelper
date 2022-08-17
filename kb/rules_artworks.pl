@@ -13,12 +13,14 @@
 
 %If the artwork is part of a composition, return the other artworks that are part of that composition
 rule(other_elements_composition,
-    (A, Other_elements),
+    (A, Artwork),
     [
         fact(artwork, (A, _, _, _, _, _)),
+        fact(artwork, (Artwork, _, _, _, _, _)),
+        call(A \= Artwork),
         fact(composition, (C)),
         call(member(A, C)),
-        call(remove_element_from_list(A, C, Other_elements))
+        call(member(Artwork, C))
     ]
 ).
 
