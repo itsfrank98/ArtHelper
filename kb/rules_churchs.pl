@@ -34,9 +34,8 @@ rule(churches_same_construction_years,
 rule(retrieve_church_information, 
     (C, CName, CityName, Yb, Ye, Architects, StylesNames),
     [
-        fact(church, (C, CName, City, Yb, Ye)),
-        fact(city, (City, CityName)),
-        fact(designed, (C, Architects)),
+        fact(church, (C, CName, CityName, Yb, Ye)),
+        fact(designed_by, (C, Architects)),
         fact(follows, (C, Styles)),
         call(convert_list_elements_to_names(Styles, StylesNames))
     ]

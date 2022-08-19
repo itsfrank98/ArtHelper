@@ -6,7 +6,7 @@ rule(retrieve_artist_places,
     [
         fact(artist, (A, _, _, _)),
         call(!),
-        fact(designed, (Place, L)),
+        fact(designed_by, (Place, L)),
         call(member(A, L))
     ]
 ).

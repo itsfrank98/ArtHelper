@@ -15,9 +15,9 @@ fact(style, (realism, 'Realism', 1840, 1880, artistic)).
 fact(style, (impressionism, 'Impressionism', 1865, 1900, artistic)).
 fact(style, (post_impressionism, 'Post Impressionism', 1886, 1905, artistic)).
 
-fact(same_main_current, ([proto_renaissance, early_renaissance, high_renaissance])).
-fact(same_main_current, ([gothic, neogothic])).
-fact(same_main_current, ([impressionism, post_impressionism])).
+fact(main_current, ([proto_renaissance, early_renaissance, high_renaissance])).
+fact(main_current, ([gothic, neogothic])).
+fact(main_current, ([impressionism, post_impressionism])).
 
 fact(follows, (monna_lisa, [high_renaissance])). 
 fact(follows, (magi_adoration, [early_renaissance])).

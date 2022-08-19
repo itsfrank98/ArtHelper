@@ -3,38 +3,38 @@
 :- dynamic fact/2.
 
 %PAINTINGS
-fact(artwork, (monna_lisa, 'Monna Lisa', 1503, florence, painting, 'Portrait of Lisa Gherardini, wife of a florentine noble. \nThe painting style shows her as core part of the surrounding nature.')).
-fact(artwork, (raffaello_selfportrait, 'Autoritratto (Raffaello)', 1506, urbino, painting, 'Self portrait. The body twist is unusual for that time.')).
-fact(artwork, (san_romano_nationalgallery, 'Niccolò da Tolentino alla testa dei fiorentini', 1440, florence, painting, 'Niccolò da Tolentino is at the head \n of the florentine troops. The battle just began.')).
-fact(artwork, (san_romano_uffizi, 'Disarcionamento di Bernardino della Carda', 1440, florence, painting, 'Bernardino della Carda, hit by a spear, falls from his horse.')).
-fact(artwork, (san_romano_louvre, 'Intervento decisivo a fianco dei fiorentini di Michele Attendolo', 1440, florence, painting, 'Michele Attendolo joins the battle along the florentine troops.')).
-fact(artwork, (della_rovere_portrait, 'Ritratto di Francesco Maria della Rovere', 1537, urbino, painting, 'Portrait of Francesco Maria della Rovere, \nnoble and soldier from Urbino.')).
-fact(artwork, (velata, 'La velata', 1515, rome, painting, 'Portrait of the woman believed to be Raphael\'s girlfriend')).
-fact(artwork, (venere_birth, 'Nascita di Venere', 1485, florence, painting, 'Portrayal of the birth of Venus, standing in a \n scallcop shell. The wind god Zephyr blows at her')).
-fact(artwork, (primavera, 'La Primavera', 1480, florence, painting, 'The painting features six female figures and two male, along with a cupid, \nin an orange grove. The movement of the composition is from right to left, \n so following that direction the standard identification of the figures is: \nat far right "Zephyrus, the biting wind of March, kidnaps and possesses \nthe nymph Chloris, whom he later marries and transforms into a deity; \nshe becomes the goddess of Spring, eternal bearer of life, and is \n scattering roses on the ground." \n Chloris the nymph overlaps Flora, the goddess she transforms into.')).
-fact(artwork, (tondo_doni, 'Tondo Doni', 1505, florence, painting, 'Depiction of the Holy Family in a round painting (tondo). Contrary to \nthe iconography Joseph is holding the Baby instead of Mary.')).
-fact(artwork, (magi_adoration, 'Adorazione dei magi (Leonardo)', 1482, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
-fact(artwork, (federico_montefeltro_portrait, 'Ritratto del duca di Urbino Federico da Montefeltro', 1475, urbino, painting, 'Right half of the dyptic featuring the profiles of the two Urbino dukes.')).
-fact(artwork, (battista_sforza_portrait, 'Ritratto di Battista Sforza', 1475, urbino, painting, 'Right half of the dyptic featuring the profiles of the two Urbino dukes.\n She was already dead when her portrait was made. Her hairline is very \nhigh, as imposed by the fashion of that time.')).
-fact(artwork, (bacco, 'Bacco', 1595, rome, painting, 'Potrayal of Bacchus, the wine and thrill god.')).
-fact(artwork, (madonna_cardellino, 'Madonna del cardellino', 1506, florence, painting, 'The scene depicts the Madonna watching Jesus and John the Baptist as \nthey have fun playing with a goldfinch (cardellino in Italian), which \nsymbolizes Christ\'s passion')).
-fact(artwork, (venere_marte, 'Venere e Marte', 1482, florence, painting, 'Venus watching as Mars as he tries to sleep. Two infant satyrs play near \nMars, disturbing his sleep.')).
-fact(artwork, (madonna_garofani, 'Madonna dei Garofani', 1507, perugia, painting, 'Mary plays with Jesus. The two exchange some red carnations (garofani in \nItalian), which symbolize both Jesus\' passion and his marriage with the \nChurch. In spite of what imposed by the iconography of that time, the two \nare not portrayed in rigid and formal postures, but they seem to be happy \nand carefree')).
+fact(artwork, (monna_lisa, 'Monna Lisa', 1503, 'Florence', painting, 'Portrait of Lisa Gherardini, wife of a florentine noble. \nThe painting style shows her as core part of the surrounding nature.')).
+fact(artwork, (raffaello_selfportrait, 'Autoritratto (Raffaello)', 1506, 'Urbino', painting, 'Self portrait. The body twist is unusual for that time.')).
+fact(artwork, (san_romano_nationalgallery, 'Niccolò da Tolentino alla testa dei fiorentini', 1440, 'Florence', painting, 'Niccolò da Tolentino is at the head \n of the florentine troops. The battle just began.')).
+fact(artwork, (san_romano_uffizi, 'Disarcionamento di Bernardino della Carda', 1440, 'Florence', painting, 'Bernardino della Carda, hit by a spear, falls from his horse.')).
+fact(artwork, (san_romano_louvre, 'Intervento decisivo a fianco dei fiorentini di Michele Attendolo', 1440, 'Florence', painting, 'Michele Attendolo joins the battle along the florentine troops.')).
+fact(artwork, (della_rovere_portrait, 'Ritratto di Francesco Maria della Rovere', 1537, 'Urbino', painting, 'Portrait of Francesco Maria della Rovere, \nnoble and soldier from Urbino.')).
+fact(artwork, (velata, 'La velata', 1515, 'Rome', painting, 'Portrait of the woman believed to be Raphael\'s girlfriend')).
+fact(artwork, (venere_birth, 'Nascita di Venere', 1485, 'Florence', painting, 'Portrayal of the birth of Venus, standing in a \n scallcop shell. The wind god Zephyr blows at her')).
+fact(artwork, (primavera, 'La Primavera', 1480, 'Florence', painting, 'The painting features six female figures and two male, along with a cupid, \nin an orange grove. The movement of the composition is from right to left, \n so following that direction the standard identification of the figures is: \nat far right "Zephyrus, the biting wind of March, kidnaps and possesses \nthe nymph Chloris, whom he later marries and transforms into a deity; \nshe becomes the goddess of Spring, eternal bearer of life, and is \n scattering roses on the ground." \n Chloris the nymph overlaps Flora, the goddess she transforms into.')).
+fact(artwork, (tondo_doni, 'Tondo Doni', 1505, 'Florence', painting, 'Depiction of the Holy Family in a round painting (tondo). Contrary to \nthe iconography Joseph is holding the Baby instead of Mary.')).
+fact(artwork, (magi_adoration, 'Adorazione dei magi (Leonardo)', 1482, 'Florence', painting, 'The three kings arrive at the birthplace of Jesus')).
+fact(artwork, (federico_montefeltro_portrait, 'Ritratto del duca di Urbino Federico da Montefeltro', 1475, 'Urbino', painting, 'Right half of the dyptic featuring the profiles of the two Urbino dukes.')).
+fact(artwork, (battista_sforza_portrait, 'Ritratto di Battista Sforza', 1475, 'Urbino', painting, 'Right half of the dyptic featuring the profiles of the two Urbino dukes.\n She was already dead when her portrait was made. Her hairline is very \nhigh, as imposed by the fashion of that time.')).
+fact(artwork, (bacco, 'Bacco', 1595, 'Rome', painting, 'Potrayal of Bacchus, the wine and thrill god.')).
+fact(artwork, (madonna_cardellino, 'Madonna del cardellino', 1506, 'Florence', painting, 'The scene depicts the Madonna watching Jesus and John the Baptist as \nthey have fun playing with a goldfinch (cardellino in Italian), which \nsymbolizes Christ\'s passion')).
+fact(artwork, (venere_marte, 'Venere e Marte', 1482, 'Florence', painting, 'Venus watching as Mars as he tries to sleep. Two infant satyrs play near \nMars, disturbing his sleep.')).
+fact(artwork, (madonna_garofani, 'Madonna dei Garofani', 1507, 'Perugia', painting, 'Mary plays with Jesus. The two exchange some red carnations (garofani in \nItalian), which symbolize both Jesus\' passion and his marriage with the \nChurch. In spite of what imposed by the iconography of that time, the two \nare not portrayed in rigid and formal postures, but they seem to be happy \nand carefree')).
 fact(artwork, (bacco_arianna, 'Bacco e Arianna', 1523, ferrara, painting, 'Ariadne greets the ship on which her lover, Teseo, boarded. Bacchus, \nwho is in love with Arianna, jumps from a wagon and reaches out to her.')).
-fact(artwork, (sunflowers, 'Sunflowers', 1888, arles, painting, 'One of the paintings in the series of the \'sunflowers\' by the Dutch artist')).
-fact(artwork, (van_gogh_with_hat, 'Self-portrait with grey hat', 1888, arles, painting, 'Self portrait of Van Gogh wearing a grey felt hat.')).
-fact(artwork, (van_gogh_while_painting, 'Self-portrait as a painter', 1887, paris, painting, 'Self portrait of Van Gogh while painting something.')).
-fact(artwork, (potato_eaters, 'Four Peasants at a Meal', 1885, nuenen, painting, 'In this ordinary life depiction, the author portrays five peasants as they are \nhaving lunch, eating some potatoes. The atmosphere and choice of the \nmodels manages to represent the peasants as they really are, simple and poor.')).
-fact(artwork, (athens_school, 'Athens school', 1411, rome, fresco, 'Depiction of the great phylosophers. The two main figures are Plato and \nAristoteles. The former represents the theme of the search for the good. \nThe latter symbolizes something more rational. Many other phylosophers \nare portrayed, organized in groups according to their school of thought.')).
-fact(artwork, (adam_creation, 'Creazione di Adamo', 1511, rome, fresco, 'God creates Adam. Their hands don\'t touch, representing the unreachability \nof perfection for the humans')).
-fact(artwork, (eve_creation, 'Creazione di Eva', 1510, rome, fresco, 'God creates Eve')).
-fact(artwork, (sacrament_dispute, 'Disputa del sacramento', 1509, rome, fresco, 'The scene is on two levels, spanning Earth and Heaven. Above, the main \nfigure is Christ, flanked by Mary and John the Baptist. On an altar sits the \nmonstrance. On the lower level, there is an altar flanked by theologians \nwho are debating Transubstantiation.')).
-fact(artwork, (adam_animals_creation, 'Creazione degli animali e di Adamo', 1420, florence, fresco, 'God creates Adam and the animals')).
-fact(artwork, (eve_and_sin, 'Creazione di Eva e il Peccato originale', 1420, florence, fresco, 'God creates Eve, portrayal of the original sin')).
-fact(artwork, (magi_botticelli, 'Adorazione dei Magi (Botticelli)', 1475, florence, painting, 'The three kings arrive at the birthplace of Jesus')).
-fact(artwork, (universal_judice, 'Giudizio Universale', 1541, rome, fresco, 'The fresco decorates the wall behind the altar in the Sistine Chapel. The \nscene depicts the end of times, when there will be the second come of \nChrist and there will be the eternal judgment from God on all the humanity, \nto open the kingdom of Heaven.')).
-fact(artwork, (holy_trinity, 'Santa trinità', 1428, florence, fresco, 'Virgin, saint John and crucifixed Jesus')).
-fact(artwork, (madonna_casini, 'Madonna del Solletico', 1426, florence, painting, 'The Virgin, blessing her Child with two fingers, tickles Jesus, who laughs')).
+fact(artwork, (sunflowers, 'Sunflowers', 1888, 'Arles', painting, 'One of the paintings in the series of the \'sunflowers\' by the Dutch artist')).
+fact(artwork, (van_gogh_with_hat, 'Self-portrait with grey hat', 1888, 'Arles', painting, 'Self portrait of Van Gogh wearing a grey felt hat.')).
+fact(artwork, (van_gogh_while_painting, 'Self-portrait as a painter', 1887, 'Paris', painting, 'Self portrait of Van Gogh while painting something.')).
+fact(artwork, (potato_eaters, 'Four Peasants at a Meal', 1885, 'Nuenen', painting, 'In this ordinary life depiction, the author portrays five peasants as they are \nhaving lunch, eating some potatoes. The atmosphere and choice of the \nmodels manages to represent the peasants as they really are, simple and poor.')).
+fact(artwork, (athens_school, 'Athens school', 1411, 'Rome', fresco, 'Depiction of the great phylosophers. The two main figures are Plato and \nAristoteles. The former represents the theme of the search for the good. \nThe latter symbolizes something more rational. Many other phylosophers \nare portrayed, organized in groups according to their school of thought.')).
+fact(artwork, (adam_creation, 'Creazione di Adamo', 1511, 'Rome', fresco, 'God creates Adam. Their hands don\'t touch, representing the unreachability \nof perfection for the humans')).
+fact(artwork, (eve_creation, 'Creazione di Eva', 1510, 'Rome', fresco, 'God creates Eve')).
+fact(artwork, (sacrament_dispute, 'Disputa del sacramento', 1509, 'Rome', fresco, 'The scene is on two levels, spanning Earth and Heaven. Above, the main \nfigure is Christ, flanked by Mary and John the Baptist. On an altar sits the \nmonstrance. On the lower level, there is an altar flanked by theologians \nwho are debating Transubstantiation.')).
+fact(artwork, (adam_animals_creation, 'Creazione degli animali e di Adamo', 1420, 'Florence', fresco, 'God creates Adam and the animals')).
+fact(artwork, (eve_and_sin, 'Creazione di Eva e il Peccato originale', 1420, 'Florence', fresco, 'God creates Eve, portrayal of the original sin')).
+fact(artwork, (magi_botticelli, 'Adorazione dei Magi (Botticelli)', 1475, 'Florence', painting, 'The three kings arrive at the birthplace of Jesus')).
+fact(artwork, (universal_judice, 'Giudizio Universale', 1541, 'Rome', fresco, 'The fresco decorates the wall behind the altar in the Sistine Chapel. The \nscene depicts the end of times, when there will be the second come of \nChrist and there will be the eternal judgment from God on all the humanity, \nto open the kingdom of Heaven.')).
+fact(artwork, (holy_trinity, 'Santa trinità', 1428, 'Florence', fresco, 'Virgin, saint John and crucifixed Jesus')).
+fact(artwork, (madonna_casini, 'Madonna del Solletico', 1426, 'Florence', painting, 'The Virgin, blessing her Child with two fingers, tickles Jesus, who laughs')).
 
 fact(polyptych, ([battista_sforza_portrait, federico_montefeltro_portrait])).
 fact(polyptych, ([adam_animals_creation, eve_and_sin])).

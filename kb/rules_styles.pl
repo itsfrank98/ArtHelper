@@ -18,7 +18,7 @@ rule(is_exponent,
     [
         fact(artist, (Architect, _, Yb, Yd)),
         call(!),
-        fact(designed, (Place, Architects)),
+        fact(designed_by, (Place, Architects)),
         call(member(Architect, Architects)),
         fact(style, (S, _, Ys, Ye, _)),
         /*Many architects can design a monument through the years. So we make these checks to avoid having an architect following styles that were 
@@ -86,7 +86,7 @@ rule(influenced_same_current, (S1, S2),
         call(S1 \= S2),
         % If two styles belong to the same main current, style B can be influenced by style A only if the latter was born before the former
         call(Yb1 > Yb2),
-        fact(same_main_current, (C)),
+        fact(main_current, (C)),
         call(member(S1, C)),
         call(member(S2, C))
     ]

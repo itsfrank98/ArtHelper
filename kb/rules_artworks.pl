@@ -7,7 +7,6 @@
 [museums].
 [rules_artworks].
 [utils].
-[cities].
 [people].
 */
 
@@ -68,8 +67,7 @@ rule(fresco_same_place,
 rule(retrieve_information_artwork, 
     (A, Title, Year, City_name, Type, StyleNames, Artist, MainSubjectsNames, SecondarySubjectsNames, MuseumName, Desc),
     [
-        fact(artwork, (A, Title, Year, C, Type, Desc)),
-        fact(city, (C, City_name)),
+        fact(artwork, (A, Title, Year, City_name, Type, Desc)),
         fact(follows, (A, Styles)),
         call(convert_list_elements_to_names(Styles, StyleNames)),
         fact(author, (A, Artist)),
