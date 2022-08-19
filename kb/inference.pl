@@ -1,4 +1,4 @@
-%fact/1
+/********************* THE FOLLOWING IS A DUMMY KB FOR TESTING THE BACKWARD INFERENCE MECHANISM **************************/
 :- dynamic fact/1.
 fact(person, (elizabeth, 1926)).
 fact(person, (charles, 1948)).
@@ -23,6 +23,8 @@ rule(parent, (S, P), [(fact(father, (S, P)))]).
 rule(grandparent, (Nephew, Granny), [rule(parent, (Nephew, P)), rule(parent, (P, Granny))]).
 
 rule(older, (A, B), [fact(person, (A, X)), fact(person, (B, Y)), call(X > Y)]).
+
+/******************************************************************************************************************************/
 
 backward(fact(Z, P)) :-
     !,

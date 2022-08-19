@@ -36,9 +36,9 @@ fact(artwork, (universal_judice, 'Giudizio Universale', 1541, rome, fresco, 'The
 fact(artwork, (holy_trinity, 'Santa trinità', 1428, florence, fresco, 'Virgin, saint John and crucifixed Jesus')).
 fact(artwork, (madonna_casini, 'Madonna del Solletico', 1426, florence, painting, 'The Virgin, blessing her Child with two fingers, tickles Jesus, who laughs')).
 
-fact(composition, ([battista_sforza_portrait, federico_montefeltro_portrait])).
-fact(composition, ([adam_animals_creation, eve_and_sin])).
-fact(composition, ([san_romano_louvre, san_romano_nationalgallery, san_romano_uffizi])).
+fact(polyptych, ([battista_sforza_portrait, federico_montefeltro_portrait])).
+fact(polyptych, ([adam_animals_creation, eve_and_sin])).
+fact(polyptych, ([san_romano_louvre, san_romano_nationalgallery, san_romano_uffizi])).
 
 fact(author, (monna_lisa, leonardo_da_vinci)).
 fact(author, (magi_adoration, leonardo_da_vinci)).

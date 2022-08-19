@@ -3,14 +3,14 @@ from PrologInterface import PrologInterface
 def find_artwork_requirements(artwork, kb_path):
     interface = PrologInterface(kb_path)
     query_aw_info = "backward(rule(retrieve_information_artwork, ({}, Title, Year, City_name, Type, StyleNames, ArtistName, MainSubjectsNames, SecondarySubjectsNames, MuseumName, Desc)))".format(artwork)
-    query_other_elements_composition = "backward(rule(other_elements_composition, ({}, Artworks)))".format(artwork)
+    query_other_elements_polyptych = "backward(rule(other_elements_polyptych, ({}, Artworks)))".format(artwork)
     query_artwork_same_subject = "backward(rule(artwork_same_subject, ({}, Artworks, Characters)))".format(artwork)
     query_fresco_same_place = "backward(rule(fresco_same_place, ({}, Artworks, Place, Author)))".format(artwork)
     info = interface.query(query_aw_info)
-    other_elements_composition = interface.query(query_other_elements_composition)
+    other_elements_polyptych = interface.query(query_other_elements_polyptych)
     artwork_same_subject = interface.query(query_artwork_same_subject)
     fresco_same_place = interface.query(query_fresco_same_place)
-    return info, other_elements_composition, artwork_same_subject, fresco_same_place
+    return info, other_elements_polyptych, artwork_same_subject, fresco_same_place
 
 
 def find_artist_requirements(artist, kb_path):

@@ -11,14 +11,14 @@
 [people].
 */
 
-%If the artwork is part of a composition, return the other artworks that are part of that composition
-rule(other_elements_composition,
+/*If the artwork is part of a polyptych, return the other artworks that are part of that polyptych*/
+rule(other_elements_polyptych,
     (A, Artwork),
     [
         fact(artwork, (A, _, _, _, _, _)),
         fact(artwork, (Artwork, _, _, _, _, _)),
         call(A \= Artwork),
-        fact(composition, (C)),
+        fact(polyptych, (C)),
         call(member(A, C)),
         call(member(Artwork, C))
     ]

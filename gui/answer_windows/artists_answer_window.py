@@ -5,8 +5,6 @@ from queries import find_artist_requirements
 from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
 from gui.answer_windows import artwork_answer_window, churches_answer_window
 
-#TODO: implementare finestra che apre un artwork o un posto in questo file
-
 
 #artist_id = "neri_fioravante"
 def open(root, artist_id, kb_path, img_directory):
@@ -19,7 +17,6 @@ def open(root, artist_id, kb_path, img_directory):
     related_artists = related_artists['query_results']
     artworks = artworks['query_results']
     places = places['query_results']
-    print(places)
 
     name = info['Name']
     lbl = create_title_label(frame, text=name, fontsize=15)
