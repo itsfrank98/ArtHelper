@@ -53,5 +53,5 @@ class WindowWithCombobox():
 
         btn = Button(frame, text="Go!", width=5, height=1, background='black', fg='white', command=self.open_answer_window)
         btn.bind("<Button>", lambda e: self.open_answer_window())
-        canvas.create_window(170, 280, window=btn, anchor="nw")
+        canvas.create_window(170, 400, window=btn, anchor="nw")
         self.root.mainloop()

@@ -10,7 +10,7 @@
 [people].
 */
 
-/*If the artwork is part of a polyptych, return the other artworks that are part of that polyptych*/
+/*Check if two artworks belong to the same polyptych*/
 rule(other_elements_polyptych,
     (A, Artwork),
     [

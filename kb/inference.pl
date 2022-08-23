@@ -26,22 +26,22 @@ rule(older, (A, B), [fact(person, (A, X)), fact(person, (B, Y)), call(X > Y)]).
 
 /******************************************************************************************************************************/
 
-backward(fact(Z, P)) :-
+backward(fact(FName, Arguments)) :-
     !,
-    fact(Z, P).
-backward(rule(RName, Params)) :-
+    fact(FName, Arguments).
+backward(rule(RName, Arguments)) :-
     !,
-    rule(RName, Params, Body),
-    bw(rule(RName, Params, Body), [], L),
+    rule(RName, Arguments, Body),
+    bw(rule(RName, Arguments, Body), [], L),
     asserta(used(L)).
-bw(rule(RName, Params, RBody), L, L2) :-
+bw(rule(RName, Arguments, RBody), L, L2) :-
     !,
     prove(RBody, L, L1),
-    append([(RName, Params)], L1, L2).
-bw(rule(RName, Params), L1, L2) :-
+    append([(RName, Arguments)], L1, L2).
+bw(rule(RName, Arguments), L1, L2) :-
     !,
-    rule(RName, Params, RBody),
-    bw(rule(RName, Params, RBody), L1, L2).
+    rule(RName, Arguments, RBody),
+    bw(rule(RName, Arguments, RBody), L1, L2).
 bw(fact(Z, P), L, L1) :-
     !,
     backward(fact(Z, P)),
@@ -62,31 +62,3 @@ prove([H|T], L, L3) :-
     !,
     bw(H, L, L2), 
     prove(T, L2, L3).
-
-    
-
-forward :- done.
-forward :- 
-    fact(F), 
-    not(pursuit(F)),
-    assertz(usedfact(F)),
-    retract(fact(F)),
-    forward.
-
-done :- not(fact(_)).
-
-pursuit(F) :-
-    rule(L, R),
-    rule_pursuit(F, L, R),
-    fail.
-rule_pursuit(F, L, R) :-
-    member(F, R),
-    delete(F, R, NewR),
-    new_rule(L, NewR).
-
-new_rule(L, []) :-
-    not(fact(L)),
-    asserta(fact(L)).
-new_rule(L, R) :-
-    R \= [],
-    asserta(rule(L, R)).

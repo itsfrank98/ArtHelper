@@ -62,7 +62,7 @@ def add_canvas(root, frame, img, x, y, text, type):
 
 
 # Initialize the root
-root = create_or_set_root("KnowYourArt", "600x600", False, False)
+root = create_or_set_root("ArtHelper", "600x600", False, False)
 
 # Create the frames
 f_styles = Frame(root)
