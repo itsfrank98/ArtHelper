@@ -1,5 +1,5 @@
 from tkinter import *
-from queries import find_style_requirements
+from prolog.queries import find_style_requirements
 from gui.utils import create_title_label, add_frame_answer_window, format_id
 from gui.answer_windows import explanation_window
 

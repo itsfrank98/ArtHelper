@@ -7,8 +7,8 @@ from tkinter import *
 from tkinter.ttk import Combobox
 from PIL import ImageTk, Image
 import os
-from utils import create_or_set_root
-from queries import find_names
+from gui.utils import create_or_set_root
+from prolog.queries import find_names
 
 class WindowWithCombobox():
     def __init__(self, title, bg_image_name, text, query, kb_path, x, y, answer_window, answer_window_title, answer_window_dimensions, answer_img_path, root=None):

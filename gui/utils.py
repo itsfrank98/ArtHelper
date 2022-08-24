@@ -57,7 +57,7 @@ def explain_answer_window(root, title, dimensions, current_item_name, id, name, 
 
 def add_frame_answer_window(root, label_text, second_label_text, dict_list, key, button_text, img_path=None, open_window_file=None,
                             lb_width=25, lb_height=9, expl=None, answer_win_title="Explanation",
-                            answer_win_dimensions="300x300", kb_path="../kb", current_item_name=None):
+                            answer_win_dimensions="300x300", kb_path="kb", current_item_name=None):
     """
     Add, in the window, a frame containing a listbox with some items. The listbox can be used to select and visualize the item itself, or
     to get an explanation on why the item was put in the listbox

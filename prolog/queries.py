@@ -1,4 +1,4 @@
-from PrologInterface import PrologInterface
+from prolog.PrologInterface import PrologInterface
 
 def find_artwork_requirements(artwork, kb_path):
     interface = PrologInterface(kb_path)

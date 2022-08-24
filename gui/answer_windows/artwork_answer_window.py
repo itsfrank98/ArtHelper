@@ -1,5 +1,5 @@
 from tkinter import *
-from queries import find_artwork_requirements
+from prolog.queries import find_artwork_requirements
 from PIL import ImageTk, Image
 import os
 from gui.utils import create_title_label, convert_atoms_to_values, print_list, add_frame_answer_window, format_id

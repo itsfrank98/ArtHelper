@@ -1,9 +1,9 @@
 from tkinter import *
 from PIL import ImageTk, Image
 import os
-from queries import find_names, find_style_requirements
-from answer_windows import styles_answer_window
-from utils import create_or_set_root
+from prolog.queries import find_names
+from gui.answer_windows import styles_answer_window
+from gui.utils import create_or_set_root
 
 width = 15
 height = 1
@@ -13,7 +13,7 @@ images = []     # Need to add images to a list otherwise they won't be displayed
 def open_style_answer_window(root, style_id):
     new_window = Toplevel(root)
     new_window = create_or_set_root("Style", "500x800", False, False, new_window)
-    styles_answer_window.open(new_window, style_id, kb_path="../kb")
+    styles_answer_window.open(new_window, style_id, kb_path="../prolog/kb")
 
 
 def add_canvas(frame, button_text, img, root, style_id):
@@ -44,7 +44,7 @@ def open(root: Toplevel):
     second_frame = Frame(main_canvas)
     main_canvas.create_window((0,0), window=second_frame, anchor="nw")
 
-    styles = find_names(kb_path="../kb", query="backward(fact(style, (ID, Name, _, _, _)))")
+    styles = find_names(kb_path="../prolog/kb", query="backward(fact(style, (ID, Name, _, _, _)))")
     # Create one canvas for each style and add it to the second frame
     for k in styles.keys():
         img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))

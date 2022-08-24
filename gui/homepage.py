@@ -1,8 +1,9 @@
 from tkinter import *
 from PIL import ImageTk, Image
-import artists_window, styles_window
-from WindowWithCombobox import WindowWithCombobox
-from utils import create_or_set_root
+import gui.artists_window as artists_window
+import gui.styles_window as styles_window
+from gui.WindowWithCombobox import WindowWithCombobox
+from gui.utils import create_or_set_root
 from gui.answer_windows import artwork_answer_window, churches_answer_window
 
 def openStylesWindow(root):
@@ -19,7 +20,7 @@ def openArtWindow(root):
                                     bg_image_name="images/art_window_bg.png",
                                     text="Choose an artwork",
                                     query="backward(fact(artwork, (ID, Name, _, _, _, _)))",
-                                    kb_path="../kb",
+                                    kb_path="../prolog/kb",
                                     x=350, y=80,
                                     answer_window=artwork_answer_window,
                                     answer_window_title="Artwork",
@@ -33,7 +34,7 @@ def openChurchesWindow(root):
                                     bg_image_name="images/churches_window_bg.png",
                                     text="Choose a church",
                                     query="backward(fact(church, (ID, Name, _, _, _)))",
-                                    kb_path="../kb",
+                                    kb_path="../prolog/kb",
                                     x=150,
                                     y=200,
                                     answer_window=churches_answer_window,

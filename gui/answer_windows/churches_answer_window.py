@@ -1,15 +1,15 @@
 import os.path
 from tkinter import *
 from PIL import ImageTk, Image
-from queries import find_church_requirements
-from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values, create_or_set_root
+from prolog.queries import find_church_requirements
+from gui.utils import create_title_label, add_frame_answer_window, print_list, convert_atoms_to_values
 from gui.answer_windows import artwork_answer_window, explanation_window
 
 
 '''id = "orsanmichele"
 kb_path = "../../kb"
 img_path = "churches_low_res"'''
-def open(id, root, kb_path, img_path):
+def open(root, id, kb_path, img_path):
     #root = create_or_set_root("Church", "500x800", False, False, root)
     frame = Frame(root)
     frame.pack()
@@ -74,7 +74,7 @@ def open(id, root, kb_path, img_path):
                                 expl=False,
                                 answer_win_title="Artwork",
                                 answer_win_dimensions="500x1000",
-                                kb_path="../kb",
+                                kb_path="../prolog/kb",
                                 current_item_name=name
                                 )
 

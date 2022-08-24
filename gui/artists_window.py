@@ -1,9 +1,9 @@
 from tkinter import *
 from PIL import ImageTk, Image
 import os
-from queries import find_names
-from answer_windows import artists_answer_window
-from utils import create_or_set_root, format_id
+from prolog.queries import find_names
+from gui.answer_windows import artists_answer_window
+from gui.utils import create_or_set_root, format_id
 
 width = 10
 height = 1
@@ -13,7 +13,7 @@ images = []     # Need to add images to a list otherwise they won't be displayed
 def open_artist_answer_window(root, artist_id):
     new_window = Toplevel(root)
     new_window = create_or_set_root("Artist", "500x800", False, False, new_window)
-    artists_answer_window.open(new_window, artist_id, kb_path="../kb", img_directory=img_directory)
+    artists_answer_window.open(new_window, artist_id, kb_path="../prolog/kb", img_directory=img_directory)
 
 def add_canvas(row, column, frame, text, img, root, artist_id):
     c = Canvas(frame, width=300, height=500)
@@ -53,7 +53,7 @@ def open(root: Toplevel):
 
     row = 0
     column = 0
-    artists = find_names(query="backward(fact(artist, (ID, Name, _, _)))", kb_path="../kb")
+    artists = find_names(query="backward(fact(artist, (ID, Name, _, _)))", kb_path="../prolog/kb")
     # Create one canvas for each style and add it to the second frame
     for k in artists.keys():
         img = ImageTk.PhotoImage(Image.open(os.path.join(img_directory, k+".png")))
