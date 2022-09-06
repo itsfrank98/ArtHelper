@@ -31,7 +31,7 @@ rule(artwork_same_subject,
     [
         fact(artwork, (A, _, _, _, _, _)),
         fact(main_subject, (A, AMain)),
-        call(AMain \= []),
+        call(AMain \== []),
         fact(follows, (A, S)),
         call(!),
         fact(artwork, (B, _, _, _, _, _)),
@@ -40,9 +40,9 @@ rule(artwork_same_subject,
         fact(main_subject, (B, BMain)),
         fact(secondary_subject, (B, BSecondary)),
         call(list_concat(BMain, BSecondary, BPortrays)),     %Put all the subjects of the artwork B into a unique list
-        call(BPortrays \= []),
+        call(BPortrays \== []),
         call(list_intersect(AMain, BPortrays, Intersection)),
-        call(Intersection \= []),
+        call(Intersection \== []),
         call(convert_list_elements_to_names(Intersection, Characters))
     ]
 ).
