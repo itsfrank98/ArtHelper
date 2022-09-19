@@ -8,6 +8,7 @@
 [rules_artworks].
 [utils].
 [people].
+
 */
 
 /*Check if two artworks belong to the same polyptych*/
